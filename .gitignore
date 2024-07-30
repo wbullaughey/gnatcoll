@@ -1,0 +1,17 @@
+obj/
+*.mak
+*.ali
+*.txt
+*.stderr
+*.stdout
+CONTRIBUTING.md
+COPYING.RUNTIME
+COPYING3
+Makefile
+README.md
+alire.toml
+docs/
+examples/
+gnat_debug.adc
+testsuite/
+version_information
