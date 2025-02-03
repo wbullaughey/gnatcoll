@@ -1,0 +1,9 @@
+[submodule "ada_lib"]
+	path = ada_lib
+	url = git@github.com:wbullaughey/ada_lib
+[submodule "aunit"]
+	path = aunit
+	url = git@github.com:wbullaughey/aunit
+[submodule "vendor/github.com/gnoga"]
+	path = vendor/github.com/gnoga
+	url = git@github.com:wbullaughey/gnoga
