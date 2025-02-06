@@ -182,6 +182,7 @@
             <F N="../../ada_lib/ada_lib_tests/list-ada_lib-all.txt"/>
             <F N="../../ada_lib/ada_lib_tests/list-ada_lib.txt"/>
             <F N="../../ada_lib/ada_lib_tests/notes.txt"/>
+            <F N="../../ada_lib/ada_lib_tests/project_paths.cfg"/>
             <F N="../../ada_lib/ada_lib_tests/remote_build.txt"/>
             <F N="../../ada_lib/ada_lib_tests/suites"/>
             <F N="../../ada_lib/ada_lib_tests/test-macosx"/>

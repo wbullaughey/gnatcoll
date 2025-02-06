@@ -37,6 +37,7 @@
         <F N="../../aunit/.gitignore"/>
         <F N="../../aunit/alire.toml"/>
         <F N="../../aunit/aunit.gpr"/>
+        <F N="../../aunit/config/aunit_config.gpr"/>
         <F N="../../aunit/build.sh"/>
     </Files>
     <Config

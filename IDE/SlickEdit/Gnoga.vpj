@@ -60,6 +60,7 @@
             N="../../vendor/github.com/gnoga/tools/*.gpr"
             Recurse="1"
             Excludes=""/>
+        <F N="../../vendor/github.com/gnoga/alire.toml"/>
         <F N="../../vendor/github.com/gnoga/build.sh"/>
         <F
             N="Gnoga.mak"

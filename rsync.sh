@@ -9,35 +9,69 @@ export OUTPUT=rsync.txt
 if [ -z "$VERBOSE" ]; then # not verbose
    export OPTIONS="-lptvq"
 else                       # verbose
-   export OPTIONS=-lptvv
+   export OPTIONS="-lptv"
 fi
 
 echo OPTIONS $OPTIONS
 
-function copy_file {
+function report {
    if [ -n "$VERBOSE" ]; then
-      echo "source: $SOURCE" file: $1
-      echo "rsync file $OPTIONS $SOURCE/$1 $DESTINATION"
+      kind=$1
+      what=$2
+      echo "$kind $what does not exist"
    fi
-   if [[ -e $SOURCE/$1 ]]; then
-      rsync $OPTIONS $SOURCE/$1 $DESTINATION/$1
+}
+
+function copy_file {
+   FILE=$1
+   DIRECTORY=$2
+   if [ -n "$VERBOSE" ]; then
+      echo "copy file: $FILE directory: $DIRECTORY
+      echo "options: $OPTIONS"
+      echo "source: $SOURCE"
+      echo "destination: $DESTINATION
+      echo "rsync file $OPTIONS $SOURCE/$DIRECTORY/$FILE $DESTINATION/$DIRECTORY"
+   fi
+   if [[ -e $SOURCE/$DIRECTORY/$FILE ]]; then
+      if [ -d "$DESTINATION" ]; then
+         rsync $OPTIONS --progress $SOURCE/$DIRECTORY/$FILE $DESTINATION/$DIRECTORY
+      else
+         report "destination $DESTINATION"
+      fi
    else
-      echo "$SOURCE/$1 does not exist"
+      report "file $SOURCE/$DIRECTORY/$FILE"
    fi
 }
 
 function copy_directory {
+   DIRECTORY=$1
    if [ -n "$VERBOSE" ]; then
-      echo "source: $SOURCE directory: $1"
-      echo "rsync directory $OPTIONS $SOURCE/$1/src/* $DESTINATION/$1/src"
+      echo "copy directory: $DIRECTORY"
+      echo "options: $OPTIONS"
+      echo "source: $SOURCE "
+      echo "destination: $DESTINATION"
+      echo "rsync directory $OPTIONS $SOURCE/$DIRECTORY/src/* $DESTINATION/$DIRECTORY/src"
    fi
-   rsync $OPTIONS $SOURCE/$1/*.gpr $DESTINATION/$1
-   rsync $OPTIONS $SOURCE/$1/src/* $DESTINATION/$1/src
-   if [ -d "$OPTIONS $SOURCE/$1/config" ]; then
-      rsync $OPTIONS $SOURCE/$1/config/* $DESTINATION/$1/config
+
+   if [ -d "$SOURCE/$DIRECTORY" ]; then
+      if [ -d "$DESTINATION" ]; then
+
+         rsync $OPTIONS $SOURCE/$DIRECTORY/*.gpr $DESTINATION/$DIRECTORY
+         rsync $OPTIONS $SOURCE/$DIRECTORY/src/* $DESTINATION/$DIRECTORY/src
+
+         if [ -d "$SOURCE/$DIRECTORY/config" ]; then
+            rsync $OPTIONS $SOURCE/$DIRECTORY/config/* $DESTINATION/$DIRECTORY/config
+         else
+            report source "$SOURCE/$DIRECTORY/config"
+         fi
+         copy_file alire.toml $DIRECTORY
+         copy_file project_paths.cfg $DIRECTORY
+      else
+         report destination "$DESTINATION"
+      fi
+   else
+      report source "$SOURCE/$DIRECTORY"
    fi
-   copy_file $1/alire.toml
-   copy_file $1/project_paths.cfg
 }
 
 echo "rsync source $SOURCE destination $DESTINATION" 2>&1 | tee $OUTPUT
@@ -48,7 +82,7 @@ copy_directory "ada_lib/ada_lib_gnoga" 2>&1 | tee -a $OUTPUT
 copy_directory "ada_lib/ada_lib_tests" 2>&1 | tee -a $OUTPUT
 copy_directory "aunit" 2>&1 | tee -a $OUTPUT
 copy_directory "aunit/ada_lib" 2>&1 | tee -a $OUTPUT
-#copy_directory "vendor/github.com/gnoga" 2>&1 | tee -a $OUTPUT
+# use git to check in and out vendor/github.com/gnoga
 ##copy_directory "vendor/github.com/gnoga-forked" 2>&1 | tee -a $OUTPUT
 #copy_directory "video/camera" 2>&1 | tee -a $OUTPUT
 #copy_directory "video/camera/lib" 2>&1 | tee -a $OUTPUT
@@ -60,8 +94,8 @@ copy_directory "aunit/ada_lib" 2>&1 | tee -a $OUTPUT
 #copy_directory "video/lib" 2>&1 | tee -a $OUTPUT
 #copy_directory "video/lib/video_aunit" 2>&1 | tee -a $OUTPUT
 
-copy_file remote_build.sh 2>&1 | tee -a $OUTPUT
-copy_file ada_lib/ada_lib_tests/build.sh 2>&1 | tee -a $OUTPUT
+copy_file remote_build.sh . 2>&1 | tee -a $OUTPUT
+copy_file build.sh ada_lib/ada_lib_tests 2>&1 | tee -a $OUTPUT
 #copy_file video/camera/build.sh 2>&1 | tee -a $OUTPUT
 #copy_file video/camera/driver/build.sh 2>&1 | tee -a $OUTPUT
 #copy_file video/camera/driver/unit_test/build.sh 2>&1 | tee -a $OUTPUT

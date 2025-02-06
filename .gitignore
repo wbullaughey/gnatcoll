@@ -1,0 +1,17 @@
+obj/
+save/
+vendor/
+*.mak
+*.vpwwildcardcache
+*.vpwhistuxml
+*.vtg
+*.cswi
+*.ali
+*.txt
+*.stderr
+*.swp
+*.stdout
+suites
+GNAT-*
+*-save
+

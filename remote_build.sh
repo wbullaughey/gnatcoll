@@ -23,6 +23,7 @@ echo BUILD_PATH $BUILD_PATH
 echo HOME $HOME
 echo LOCAL_APPLICATION $LOCAL_APPLICATION
 echo LOCAL_BUILD_PATH $LOCAL_BUILD_PATH
+echo PROGRAM $PROGRAM
 echo QUICK_BUILD $QUICK_BUILD
 echo RELATIVE_ALR_ENVIRONMENT_PATH $RELATIVE_ALR_ENVIRONMENT_PATH
 echo REMOTE_APPLICATION $REMOTE_APPLICATION
@@ -38,7 +39,7 @@ function local_build () {
    cd $BUILD_PATH
    rm -f $LOCAL_OUTPUT
    pwd 2>&1 | tee -a $LOCAL_OUTPUT
-   export GPR_PROJECT_PATH_FILE=$BUILD_PATH/project_paths.cfg
+   export GPR_PROJECT_PATH_FILE=$LOCAL_BUILD_PATH/project_paths.cfg
    echo GPR_PROJECT_PATH_FILE $GPR_PROJECT_PATH_FILE
    alr build -- -j10 -s -k -gnatE 2>&1 | tee -a $LOCAL_OUTPUT
    echo alr completed
@@ -73,6 +74,7 @@ case  ${OS_VERSION%%.*} in
       echo laptop $LOCAL 2>&1 | tee $LOCAL_OUTPUT
       export LOCATION=local
       local_build
+      exit
 esac
 
 echo LOCATION $LOCATION
@@ -93,7 +95,7 @@ case $LOCATION in
       RESULT=$?
       if [ $RESULT -eq 0 ]; then
          echo "compile successfully. copy $PROGRAM"
-         ls -l $REMOTE_BUILD_PATH/bin
+         ls -l bin
          COMMAND="rsync -lptv $REMOTE_BUILD_PATH/bin/$PROGRAM bin"
          echo COMMAND $COMMAND
          eval $COMMAND
