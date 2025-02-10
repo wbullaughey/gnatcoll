@@ -23,13 +23,13 @@
             Filters="*.*"
             GUID="{9D6A281E-BC32-4223-97DE-38B42BB1BAD5}"/>
         <F
-            N="../../video/camera/driver/lib/src/*.ad?"
+            N="../../applications/video/camera/driver/lib/src/*.ad?"
             Recurse="0"
             Excludes=""
             L="1"/>
-        <F N="../../video/camera/driver/lib/.gitignore"/>
-        <F N="../../video/camera/driver/lib/alire.toml"/>
-        <F N="../../video/camera/driver/lib/driver_lib.gpr"/>
+        <F N="../../applications/video/camera/driver/lib/.gitignore"/>
+        <F N="../../applications/video/camera/driver/lib/alire.toml"/>
+        <F N="../../applications/video/camera/driver/lib/driver_lib.gpr"/>
     </Files>
     <Config
         Name="Debug"

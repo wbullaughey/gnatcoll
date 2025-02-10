@@ -9,32 +9,26 @@
         <Folder
             Name="Source Files"
             Filters="*.ada;*.adb;*.c;*.cpp"
-            GUID="{6459ABBD-1077-4E51-83DE-C26E52A19474}"/>
+            GUID="{9B5F7196-8773-444D-9B88-33B0CAC661A2}"/>
         <Folder
             Name="Header Files"
             Filters="*.h;*.ads"
-            GUID="{ACAC5E42-F48C-4A67-B1A5-D0329DD101AA}"/>
+            GUID="{9B1BB69A-0549-43AC-9CB6-A31109D56BCB}"/>
         <Folder
             Name="Resource Files"
             Filters="*.def;*.res"
-            GUID="{DBB3645F-EB7B-4953-A021-14BD13CB1987}"/>
+            GUID="{23CD444E-DBA1-4F34-81E8-B17017E1926B}"/>
         <Folder
             Name="Other Files"
             Filters="*.*"
-            GUID="{F8399801-2FC9-4822-A57D-344819B5AD98}"/>
-        <F
-            N="../../applications/video/camera/lib/unit_test/src/*.ad?"
-            Recurse="0"
-            Excludes=""
-            L="1"/>
-        <F N="../../applications/video/camera/lib/unit_test/alire.toml"/>
-        <F N="../../applications/video/camera/lib/unit_test/unit_test.gpr"/>
+            GUID="{7D3BE498-7C75-4E43-A6F2-4D218FD5F71F}"/>
+        <F N="../../applications/applications.gpr"/>
     </Files>
     <Config
         Name="Debug"
         Type="gnuc"
         DebugCallbackName="gdb"
-        OutputFile="camera_lib_unit_test"
+        OutputFile="applications"
         CompilerConfigName="Latest Version">
         <Menu>
             <Target
@@ -138,7 +132,7 @@
         Name="Release"
         Type="gnuc"
         DebugCallbackName="gdb"
-        OutputFile="camera_lib_unit_test"
+        OutputFile="applications"
         CompilerConfigName="Latest Version">
         <Menu>
             <Target

@@ -7,6 +7,7 @@
         <Project File="../ada_lib_gnoga.vpj"/>
         <Project File="../alias_list.vpj"/>
         <Project File="alr_environment.vpj"/>
+        <Project File="../applications.vpj"/>
         <Project File="../aunit.vpj"/>
         <Project File="camera.vpj"/>
         <Project File="../camera_lib.vpj"/>
@@ -26,6 +27,5 @@
         <Project File="../video.vpj"/>
         <Project File="video_aunit.vpj"/>
         <Project File="../video_lib.vpj"/>
-        <Project File="../video_lib_unit_test.vpj"/>
     </Projects>
 </Workspace>

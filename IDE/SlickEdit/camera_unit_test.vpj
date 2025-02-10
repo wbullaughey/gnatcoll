@@ -1,6 +1,6 @@
 <!DOCTYPE Project SYSTEM "http://www.slickedit.com/dtd/vse/10.0/vpj.dtd">
 <Project
-    WorkingDir="../../video/camera/unit_test/"
+    WorkingDir="../../applications/video/camera/unit_test/"
     Version="10.0"
     VendorName="SlickEdit"
     TemplateName="Ada - GNU Ada Compiler"
@@ -14,8 +14,8 @@
             Name="Header Files"
             Filters="*.h;*.ads"
             GUID="{3B9B0AB7-247E-43B8-8E87-0610E4912511}">
-            <F N="../../video/camera/lib/src/camera-command_queue.ads"/>
-            <F N="../../video/camera/camera-controller.ads"/>
+            <F N="../../applications/video/camera/lib/src/camera-command_queue.ads"/>
+            <F N="../../applications/video/camera/camera-controller.ads"/>
         </Folder>
         <Folder
             Name="Resource Files"
@@ -26,46 +26,47 @@
             Filters="*.*"
             GUID="{49C949F5-78F7-4981-908F-2C449A246DF4}"/>
         <F
-            N="../../video/camera/test_lib/src/*.ad?"
+            N="../../applications/video/camera/test_lib/src/*.ad?"
             Recurse="0"
             Excludes=""
             L="1"/>
         <F
-            N="../../video/camera/unit_test/src/*.ad?"
+            N="../../applications/video/camera/unit_test/src/*.ad?"
             Recurse="0"
             Excludes=""
             L="1"/>
         <F
-            N="../../video/camera/unit_test/*.cfg"
+            N="../../applications/video/camera/unit_test/*.cfg"
             Recurse="0"
             Excludes=""
             L="1"/>
         <F
-            N="../../video/camera/unit_test/*.gpr"
+            N="../../applications/video/camera/unit_test/*.gpr"
             Recurse="0"
             Excludes=""
             L="1"/>
         <F
-            N="../../video/camera/unit_test/doc/*.txt"
+            N="../../applications/video/camera/unit_test/doc/*.txt"
             Recurse="1"
             Excludes=""/>
-        <F N="../../video/camera/unit_test/.gitignore"/>
-        <F N="../../video/camera/unit_test/alire.toml"/>
-        <F N="../../video/camera/unit_test/build.sh"/>
-        <F N="../../video/camera/unit_test/build.txt"/>
-        <F N="../../video/camera/unit_test/camera_tests.gpr"/>
-        <F N="../../video/camera/unit_test/config/camera_tests_config.gpr"/>
+        <F N="../../applications/video/camera/unit_test/.gitignore"/>
+        <F N="../../applications/video/camera/unit_test/alire.toml"/>
+        <F N="../../applications/video/camera/unit_test/build.sh"/>
+        <F N="../../applications/video/camera/unit_test/build.txt"/>
+        <F N="../../applications/video/camera/unit_test/camera_tests.gpr"/>
+        <F N="../../applications/video/camera/unit_test/config/camera_tests_config.gpr"/>
         <F N="../../../../../../bin/debugvs.sh"/>
-        <F N="../../video/camera/unit_test/driver_test.sh"/>
-        <F N="../../video/camera/driver/help"/>
-        <F N="../../video/camera/unit_test/help"/>
-        <F N="../../video/camera/unit_test/list-camera_aunit.txt"/>
-        <F N="../../video/camera/unit_test/list-camera_driver.txt"/>
-        <F N="../../video/camera/unit_test/load_test_setup.cfg"/>
-        <F N="../../video/camera/unit_test/project_paths.cfg"/>
-        <F N="../../video/camera/unit_test/repeat.sh"/>
-        <F N="../../video/camera/unit_test/run.sh"/>
-        <F N="../../video/camera/unit_test/suites"/>
+        <F N="../../applications/video/camera/unit_test/driver_test.sh"/>
+        <F N="../../applications/video/camera/driver/help"/>
+        <F N="../../applications/video/camera/unit_test/help"/>
+        <F N="../../applications/video/camera/unit_test/list-camera_aunit.txt"/>
+        <F N="../../applications/video/camera/unit_test/list-camera_driver.txt"/>
+        <F N="../../applications/video/camera/unit_test/load_test_setup.cfg"/>
+        <F N="../../applications/video/camera/unit_test/project_paths.cfg"/>
+        <F N="../../applications/video/camera/unit_test/remote_build.txt"/>
+        <F N="../../applications/video/camera/unit_test/repeat.sh"/>
+        <F N="../../applications/video/camera/unit_test/run.sh"/>
+        <F N="../../applications/video/camera/unit_test/suites"/>
         <F N="../../video/lib/video_aunit/test-macosx"/>
     </Files>
     <Config
@@ -81,7 +82,7 @@
                 CaptureOutputWith="ProcessBuffer"
                 Deletable="0"
                 SaveOption="SaveWorkspaceFiles"
-                RunFromDir="%rw"
+                RunFromDir="/Users/wayne/Project/git/alr/alr_environment/applications/video/camera/unit_test/"
                 ClearProcessBuffer="1"
                 Verbose="1"
                 Beep="1">
@@ -189,7 +190,7 @@
                 CaptureOutputWith="ProcessBuffer"
                 Deletable="0"
                 SaveOption="SaveWorkspaceFiles"
-                RunFromDir="%rw"
+                RunFromDir="/Users/wayne/Project/git/alr/alr_environment/applications/video/camera/unit_test/"
                 ClearProcessBuffer="1"
                 Verbose="1"
                 Beep="1">

@@ -1,6 +1,7 @@
 #!/bin/zsh
 source ~/.zshrc
-echo remote_build $*
+#set -x
+echo remote_build $* $OS_VERSION
 pwd
 
 export ROOT_PATH=$1
@@ -63,7 +64,7 @@ case  ${OS_VERSION%%.*} in
       echo desktop 2>&1 | tee $REMOTE_OUTPUT
       echo $PATH  2>&1 | tee -a $REMOTE_OUTPUT
       export LOCATION=remote
-      $ALR_ENVIRONMENT_PATH/rsync.sh verbose 2>&1 | tee -a $REMOTE_OUTPUT
+      $ALR_ENVIRONMENT_PATH/rsync.sh  2>&1 | tee -a $REMOTE_OUTPUT
       export BUILD_HOME=`pwd`
       echo BUILD_HOME $BUILD_HOME
       sshpass -p 'grandkidsaregreat' ssh wayne@MacBook $ALR_ENVIRONMENT_PATH/remote_build.sh $ROOT_PATH $BASE_PATH $PROGRAM $QUICK_BUILD 2>&1 | tee -a $REMOTE_OUTPUT
@@ -87,10 +88,8 @@ case $LOCATION in
    "remote")
       # check if build worked
       echo "rsync -lptv $REMOTE_BUILD_PATH/$LOCAL_OUTPUT .     #copy remote build.txt to desktop"
-      rsync -lptv $REMOTE_BUILD_PATH/$LOCAL_OUTPUT .     #copy remote build.txt to desktop
-#     export REMOTE_OUTPUT=$REMOTE_BUILD_PATH/build.txt
-#     echo "REMOTE_OUTPUT $REMOTE_OUTPUT"
-#     echo grep $REMOTE_OUTPUT
+      COMMAND="rsync -lptv $REMOTE_BUILD_PATH/$LOCAL_OUTPUT ."     #copy remote build.txt to desktop
+      eval $COMMAND
       grep "Build finished successfully" $LOCAL_OUTPUT
       RESULT=$?
       if [ $RESULT -eq 0 ]; then

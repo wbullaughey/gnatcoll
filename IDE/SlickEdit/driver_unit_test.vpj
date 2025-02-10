@@ -1,6 +1,6 @@
 <!DOCTYPE Project SYSTEM "http://www.slickedit.com/dtd/vse/10.0/vpj.dtd">
 <Project
-    WorkingDir="../../video/camera/driver/unit_test/"
+    WorkingDir="../../applications/video/camera/driver/unit_test/"
     Version="10.0"
     VendorName="SlickEdit"
     TemplateName="Ada - GNU Ada Compiler"
@@ -26,24 +26,24 @@
             Filters="*.*"
             GUID="{3E5BB005-08E5-48D1-B2BD-4BEB63E52605}"/>
         <F
-            N="../../video/camera/driver/unit_test/src/*.ad?"
+            N="../../applications/video/camera/driver/unit_test/src/*.ad?"
             Recurse="0"
             Excludes=""
             L="1"/>
         <F
-            N="../../video/camera/driver/unit_test/config/*.gpr"
+            N="../../applications/video/camera/driver/unit_test/config/*.gpr"
             Recurse="0"
             Excludes=""
             L="1"/>
-        <F N="../../video/camera/driver/unit_test/.gitignore"/>
-        <F N="../../video/camera/driver/unit_test/alire.toml"/>
-        <F N="../../video/camera/driver/unit_test/build.sh"/>
-        <F N="../../video/camera/driver/unit_test/driver_unit_test.gpr"/>
-        <F N="../../video/camera/driver/unit_test/help"/>
-        <F N="../../video/camera/driver/unit_test/list-driver_unit.txt"/>
+        <F N="../../applications/video/camera/driver/unit_test/.gitignore"/>
+        <F N="../../applications/video/camera/driver/unit_test/alire.toml"/>
+        <F N="../../applications/video/camera/driver/unit_test/build.sh"/>
+        <F N="../../applications/video/camera/driver/unit_test/driver_unit_test.gpr"/>
+        <F N="../../applications/video/camera/driver/unit_test/help"/>
+        <F N="../../applications/video/camera/driver/unit_test/list-driver_unit.txt"/>
         <F N="../../../local.gpr"/>
-        <F N="../../video/camera/driver/unit_test/run.sh"/>
-        <F N="../../video/camera/driver/unit_test/suites"/>
+        <F N="../../applications/video/camera/driver/unit_test/run.sh"/>
+        <F N="../../applications/video/camera/driver/unit_test/suites"/>
     </Files>
     <Config
         Name="Debug"
