@@ -43,12 +43,11 @@
         <F N="../../../applications/video/camera/alire.toml"/>
         <F N="../../../applications/video/camera/gnoga-data/css/camera.css"/>
         <F N="../../../applications/video/camera/camera_control.gpr"/>
-        <F N="../../../applications/video/camera/help"/>
-        <F N="../../../applications/video/camera/list-camera.txt"/>
         <F N="../../../applications/video/camera/run.sh"/>
         <F N="../../../applications/video/camera/run_camera.sh"/>
         <F N="../../../applications/video/camera/setup.cfg"/>
         <F N="../../../applications/video/camera/state.cfg"/>
+        <F N="../../../applications/video/camera/types.note"/>
     </Files>
     <Config
         Name="Debug"
