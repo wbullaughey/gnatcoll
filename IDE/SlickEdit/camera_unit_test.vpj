@@ -14,6 +14,7 @@
             Name="Header Files"
             Filters="*.h;*.ads"
             GUID="{3B9B0AB7-247E-43B8-8E87-0610E4912511}">
+            <F N="../../ada_lib/ada_lib_tests/src/ada_lib-options-aunit_lib.ads"/>
             <F N="../../applications/video/camera/lib/src/camera-command_queue.ads"/>
             <F N="../../applications/video/camera/camera-controller.ads"/>
         </Folder>
