@@ -9,7 +9,9 @@
         <Folder
             Name="Source Files"
             Filters="*.ada;*.adb;*.c;*.cpp"
-            GUID="{C6EEF87D-62B6-437B-9E20-E6B9083E9DDC}"></Folder>
+            GUID="{C6EEF87D-62B6-437B-9E20-E6B9083E9DDC}">
+            <F N="../../ada_lib/ada_lib_tests/src/ada_lib-options-aunit_lib.adb"/>
+        </Folder>
         <Folder
             Name="Header Files"
             Filters="*.h;*.ads"
