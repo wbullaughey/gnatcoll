@@ -15,6 +15,6 @@ package Alr_Environment_Config is
    Alire_Host_Distro : constant String := "distro_unknown";
 
    type Build_Profile_Kind is (release, validation, development);
-   Build_Profile : constant Build_Profile_Kind := release;
+   Build_Profile : constant Build_Profile_Kind := development;
 
 end Alr_Environment_Config;
