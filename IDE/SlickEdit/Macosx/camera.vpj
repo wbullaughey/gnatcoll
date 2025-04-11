@@ -43,6 +43,8 @@
         <F N="../../../applications/video/camera/alire.toml"/>
         <F N="../../../applications/video/camera/gnoga-data/css/camera.css"/>
         <F N="../../../applications/video/camera/camera_control.gpr"/>
+        <F N="../../../applications/video/camera/help"/>
+        <F N="../../../applications/video/camera/list-camera.txt"/>
         <F N="../../../applications/video/camera/run.sh"/>
         <F N="../../../applications/video/camera/run_camera.sh"/>
         <F N="../../../applications/video/camera/setup.cfg"/>
@@ -74,7 +76,7 @@
                 CaptureOutputWith="ProcessBuffer"
                 Deletable="0"
                 SaveOption="SaveWorkspaceFiles"
-                RunFromDir="/Users/wayne/Project/git/alr/applications/"
+                RunFromDir="/Users/wayne/Project/git/alr/alr_environment"
                 ClearProcessBuffer="1"
                 Verbose="1"
                 Beep="1">
@@ -182,7 +184,7 @@
                 CaptureOutputWith="ProcessBuffer"
                 Deletable="0"
                 SaveOption="SaveWorkspaceFiles"
-                RunFromDir="/Users/wayne/Project/git/alr/applications/"
+                RunFromDir="/Users/wayne/Project/git/alr/alr_environment"
                 ClearProcessBuffer="1"
                 Verbose="1"
                 Beep="1">

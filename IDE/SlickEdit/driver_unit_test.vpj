@@ -62,7 +62,7 @@
                 ClearProcessBuffer="1"
                 Verbose="1"
                 Beep="1">
-                <Exec CmdLine="./build.sh remote application/video/camera/driver/unit_test"/>
+                <Exec CmdLine="./build.sh"/>
             </Target>
             <Target
                 Name="Compile"
@@ -85,11 +85,11 @@
                 CaptureOutputWith="ProcessBuffer"
                 Deletable="0"
                 SaveOption="SaveWorkspaceFiles"
-                RunFromDir="/Users/wayne/Project/git/alr/applications/video/camera/"
+                RunFromDir="/Users/wayne/Project/git/alr/alr_environment"
                 ClearProcessBuffer="1"
                 Verbose="1"
                 Beep="1">
-                <Exec CmdLine="./build_unit_tests.sh"/>
+                <Exec CmdLine="./build_all.sh"/>
             </Target>
             <Target
                 Name="Debug"
@@ -171,7 +171,7 @@
                 ClearProcessBuffer="1"
                 Verbose="1"
                 Beep="1">
-                <Exec CmdLine="./build.sh remote application/video/camera/driver/unit_test"/>
+                <Exec CmdLine="./build.sh"/>
             </Target>
             <Target
                 Name="Compile"
@@ -194,11 +194,11 @@
                 CaptureOutputWith="ProcessBuffer"
                 Deletable="0"
                 SaveOption="SaveWorkspaceFiles"
-                RunFromDir="/Users/wayne/Project/git/alr/applications/video/camera/"
+                RunFromDir="/Users/wayne/Project/git/alr/alr_environment"
                 ClearProcessBuffer="1"
                 Verbose="1"
                 Beep="1">
-                <Exec CmdLine="./build_unit_tests.sh"/>
+                <Exec CmdLine="./build_all.sh"/>
             </Target>
             <Target
                 Name="Debug"

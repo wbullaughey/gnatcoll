@@ -112,11 +112,11 @@
                 CaptureOutputWith="ProcessBuffer"
                 Deletable="0"
                 SaveOption="SaveWorkspaceFiles"
-                RunFromDir="/Users/wayne/Project/git/alr/applications"
+                RunFromDir="/Users/wayne/Project/git/alr/alr_environment"
                 ClearProcessBuffer="1"
                 Verbose="1"
                 Beep="1">
-                <Exec CmdLine="./build.sh quick"/>
+                <Exec CmdLine="./build_all.sh"/>
             </Target>
             <Target
                 Name="Debug"
@@ -220,11 +220,11 @@
                 CaptureOutputWith="ProcessBuffer"
                 Deletable="0"
                 SaveOption="SaveWorkspaceFiles"
-                RunFromDir="/Users/wayne/Project/git/alr/applications"
+                RunFromDir="/Users/wayne/Project/git/alr/alr_environment"
                 ClearProcessBuffer="1"
                 Verbose="1"
                 Beep="1">
-                <Exec CmdLine="./build.sh quick"/>
+                <Exec CmdLine="./build_all.sh"/>
             </Target>
             <Target
                 Name="Debug"

@@ -13,7 +13,10 @@
         <Folder
             Name="Header Files"
             Filters="*.h;*.ads"
-            GUID="{9B76E2CD-8DDB-461D-B294-9E367EA4C4FA}"/>
+            GUID="{9B76E2CD-8DDB-461D-B294-9E367EA4C4FA}">
+            <F N="../../../src/execute/build_mode.ads"/>
+            <F N="../../../src/help_test/build_mode.ads"/>
+        </Folder>
         <Folder
             Name="Resource Files"
             Filters="*.def;*.res"
@@ -29,7 +32,9 @@
             L="1"/>
         <F N="../../../alire.toml"/>
         <F N="../../../alr_environment.gpr"/>
+        <F N="../../../build_all.sh"/>
         <F N="../../../default_config.gpr"/>
+        <F N="../../../global_build.sh"/>
         <F N="../../../remote_build.sh"/>
         <F N="../../../rsync.sh"/>
         <F N="../../../rsync.txt"/>
@@ -75,8 +80,9 @@
                 CaptureOutputWith="ProcessBuffer"
                 Deletable="0"
                 SaveOption="SaveWorkspaceFiles"
-                RunFromDir="%rw">
-                <Exec CmdLine="gprclean -r -p -P%rn.gpr -f"/>
+                RunFromDir="/Users/wayne/Project/git/alr/alr_environment/"
+                ClearProcessBuffer="1">
+                <Exec CmdLine="./global_build.sh"/>
             </Target>
             <Target
                 Name="Pretty Print"
