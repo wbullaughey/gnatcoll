@@ -1,6 +1,6 @@
 <!DOCTYPE Project SYSTEM "http://www.slickedit.com/dtd/vse/10.0/vpj.dtd">
 <Project
-    WorkingDir="../../video/lib"
+    WorkingDir="../../applications/video/lib/"
     Version="10.0"
     VendorName="SlickEdit"
     TemplateName="Ada - GNU Ada Compiler"
@@ -67,7 +67,7 @@
                 ClearProcessBuffer="1"
                 Beep="1"
                 TimeBuild="1">
-                <Exec CmdLine="./build.sh"/>
+                <Exec CmdLine="./build.sh execute"/>
             </Target>
             <Target
                 Name="Rebuild"
@@ -173,7 +173,7 @@
                 ClearProcessBuffer="1"
                 Beep="1"
                 TimeBuild="1">
-                <Exec CmdLine="./build.sh"/>
+                <Exec CmdLine="./build.sh execute"/>
             </Target>
             <Target
                 Name="Rebuild"

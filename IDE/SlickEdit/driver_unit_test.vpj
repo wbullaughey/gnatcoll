@@ -62,7 +62,16 @@
                 ClearProcessBuffer="1"
                 Verbose="1"
                 Beep="1">
-                <Exec CmdLine="./build.sh"/>
+                <Exec CmdLine="./build.sh execute"/>
+            </Target>
+            <Target
+                Name="build help_test"
+                MenuCaption="build help_test"
+                RunFromDir="%rw"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveWorkspaceFiles"
+                ClearProcessBuffer="1">
+                <Exec CmdLine="./build.sh help_test"/>
             </Target>
             <Target
                 Name="Compile"
@@ -171,7 +180,16 @@
                 ClearProcessBuffer="1"
                 Verbose="1"
                 Beep="1">
-                <Exec CmdLine="./build.sh"/>
+                <Exec CmdLine="./build.sh execute"/>
+            </Target>
+            <Target
+                Name="build help_test"
+                MenuCaption="build help_test"
+                RunFromDir="%rw"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveWorkspaceFiles"
+                ClearProcessBuffer="1">
+                <Exec CmdLine="./build.sh help_test"/>
             </Target>
             <Target
                 Name="Compile"

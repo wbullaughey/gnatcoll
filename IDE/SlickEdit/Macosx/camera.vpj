@@ -46,6 +46,7 @@
         <F N="../../../applications/video/camera/help"/>
         <F N="../../../applications/video/camera/list-camera.txt"/>
         <F N="../../../applications/video/camera/run.sh"/>
+        <F N="../../../applications/run_all_apps.sh"/>
         <F N="../../../applications/video/camera/run_camera.sh"/>
         <F N="../../../applications/video/camera/setup.cfg"/>
         <F N="../../../applications/video/camera/state.cfg"/>
@@ -68,7 +69,23 @@
                 ClearProcessBuffer="1"
                 Verbose="1"
                 Beep="1">
-                <Exec CmdLine="./build.sh"/>
+                <Exec CmdLine="./build.sh execute"/>
+            </Target>
+            <Target
+                Name="Help_Test"
+                MenuCaption="Help_Test"
+                RunFromDir="%rw"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveWorkspaceFiles">
+                <Exec CmdLine="./build.sh help_test"/>
+            </Target>
+            <Target
+                Name="build all"
+                MenuCaption="build all"
+                RunFromDir="%rw"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveWorkspaceFiles">
+                <Exec CmdLine="./build.sh all"/>
             </Target>
             <Target
                 Name="Rebuild"
@@ -176,7 +193,23 @@
                 ClearProcessBuffer="1"
                 Verbose="1"
                 Beep="1">
-                <Exec CmdLine="./build.sh"/>
+                <Exec CmdLine="./build.sh execute"/>
+            </Target>
+            <Target
+                Name="Help_Test"
+                MenuCaption="Help_Test"
+                RunFromDir="%rw"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveWorkspaceFiles">
+                <Exec CmdLine="./build.sh help_test"/>
+            </Target>
+            <Target
+                Name="build all"
+                MenuCaption="build all"
+                RunFromDir="%rw"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveWorkspaceFiles">
+                <Exec CmdLine="./build.sh all"/>
             </Target>
             <Target
                 Name="Rebuild"

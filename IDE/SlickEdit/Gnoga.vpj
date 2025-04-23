@@ -87,7 +87,7 @@
                 ClearProcessBuffer="1"
                 Verbose="1"
                 Beep="1">
-                <Exec CmdLine="./build.sh tutorials"/>
+                <Exec CmdLine="./build.sh execute"/>
             </Target>
             <Target
                 Name="Compile"
@@ -184,7 +184,7 @@
                 ClearProcessBuffer="1"
                 Verbose="1"
                 Beep="1">
-                <Exec CmdLine="./build.sh tutorials"/>
+                <Exec CmdLine="./build.sh execute"/>
             </Target>
             <Target
                 Name="Compile"

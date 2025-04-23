@@ -16,4 +16,10 @@ vendor/
 suites
 GNAT-*
 *-save
+*.save
+*.old
 
+/obj/
+/lib/
+/alire/
+/config/

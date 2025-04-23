@@ -1,6 +1,6 @@
 <!DOCTYPE Project SYSTEM "http://www.slickedit.com/dtd/vse/10.0/vpj.dtd">
 <Project
-    WorkingDir="."
+    WorkingDir="../../../"
     DisableExeName="1"
     Version="10.0"
     VendorName="SlickEdit"
@@ -13,10 +13,7 @@
         <Folder
             Name="Header Files"
             Filters="*.h;*.ads"
-            GUID="{9B76E2CD-8DDB-461D-B294-9E367EA4C4FA}">
-            <F N="../../../src/execute/build_mode.ads"/>
-            <F N="../../../src/help_test/build_mode.ads"/>
-        </Folder>
+            GUID="{9B76E2CD-8DDB-461D-B294-9E367EA4C4FA}"></Folder>
         <Folder
             Name="Resource Files"
             Filters="*.def;*.res"
@@ -30,14 +27,23 @@
             Recurse="0"
             Excludes=""
             L="1"/>
+        <F
+            N="../../../*.sh"
+            Recurse="0"
+            Excludes="*.a;*.o;*.ali"
+            L="1"/>
         <F N="../../../alire.toml"/>
         <F N="../../../alr_environment.gpr"/>
+        <F N="../../../config/alr_environment_config.gpr"/>
+        <F N="../../../build.sh"/>
         <F N="../../../build_all.sh"/>
         <F N="../../../default_config.gpr"/>
         <F N="../../../global_build.sh"/>
+        <F N="../../../list-help_tests.txt"/>
+        <F N="../../../list-run_all_unit_tests.txt"/>
         <F N="../../../remote_build.sh"/>
         <F N="../../../rsync.sh"/>
-        <F N="../../../rsync.txt"/>
+        <F N="../../../run_all_apps.sh"/>
     </Files>
     <Config
         Name="Debug"
@@ -53,8 +59,36 @@
                 CaptureOutputWith="ProcessBuffer"
                 Deletable="0"
                 SaveOption="SaveWorkspaceFiles"
-                RunFromDir="%rw">
-                <Exec CmdLine="gprbuild -d -p -P%rn.gpr"/>
+                RunFromDir="%rw"
+                Verbose="1"
+                ClearProcessBuffer="1"
+                Beep="1">
+                <Exec CmdLine="./build.sh execute"/>
+            </Target>
+            <Target
+                Name="Build All"
+                MenuCaption="Build All"
+                RunFromDir="%rw"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveWorkspaceFiles">
+                <Exec CmdLine="./build.sh all"/>
+            </Target>
+            <Target
+                Name="Run All Help"
+                MenuCaption="Run All Help"
+                RunFromDir="%rw"
+                SaveOption="SaveAll"
+                CaptureOutputWith="ProcessBuffer"
+                ClearProcessBuffer="1">
+                <Exec CmdLine="./run_all_apps.sh help"/>
+            </Target>
+            <Target
+                Name="run all help tests"
+                MenuCaption="run all help tests"
+                RunFromDir="%rw"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveWorkspaceFiles">
+                <Exec CmdLine="./run_all_apps.sh test"/>
             </Target>
             <Target
                 Name="Rebuild"

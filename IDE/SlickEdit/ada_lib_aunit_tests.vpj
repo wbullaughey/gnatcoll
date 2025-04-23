@@ -22,12 +22,12 @@
                 ClearProcessBuffer="1"
                 Verbose="1"
                 Beep="1">
-                <Exec CmdLine="./build.sh"/>
+                <Exec CmdLine="./build.sh execute"/>
             </Target>
             <Target
                 Name="Build All"
                 MenuCaption="Global Build"
-                RunFromDir="/Users/wayne/Project/git/alr/alr_environment/"
+                RunFromDir="/Volumes/wayne/Project/git/alr/alr_environment/ada_lib/ada_lib_tests/"
                 CaptureOutputWith="ProcessBuffer"
                 SaveOption="SaveAll"
                 ClearProcessBuffer="1">
@@ -192,6 +192,7 @@
                 Excludes=""/>
             <F N="../../ada_lib/ada_lib_tests/.gitignore"/>
             <F N="../../ada_lib/ada_lib_tests/ada_lib_tests.gpr"/>
+            <F N="../../ada_lib/ada_lib_tests/config/ada_lib_tests_config.gpr"/>
             <F N="../../ada_lib/ada_lib_tests/alire.toml"/>
             <F N="../../ada_lib/ada_lib_tests/build.txt"/>
             <F N="../../build_all.txt"/>
