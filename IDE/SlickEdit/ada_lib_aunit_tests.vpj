@@ -27,10 +27,10 @@
             <Target
                 Name="Build All"
                 MenuCaption="Global Build"
-                RunFromDir="/Volumes/wayne/Project/git/alr/alr_environment/ada_lib/ada_lib_tests/"
-                CaptureOutputWith="ProcessBuffer"
+                RunFromDir="/Users/wayne/Project/git/alr/alr_environment_redo_alr/ada_lib/ada_lib_tests/"
                 SaveOption="SaveAll"
-                ClearProcessBuffer="1">
+                ClearProcessBuffer="1"
+                CaptureOutputWith="ProcessBuffer">
                 <Exec CmdLine="./build.sh all"/>
             </Target>
             <Target
@@ -195,11 +195,9 @@
             <F N="../../ada_lib/ada_lib_tests/config/ada_lib_tests_config.gpr"/>
             <F N="../../ada_lib/ada_lib_tests/alire.toml"/>
             <F N="../../ada_lib/ada_lib_tests/build.txt"/>
-            <F N="../../build_all.txt"/>
             <F N="../../ada_lib/ada_lib_tests/file_copy_source"/>
             <F N="../../ada_lib/ada_lib_tests/help"/>
-            <F N="../../ada_lib/ada_lib_tests/list-ada_lib-all.txt"/>
-            <F N="../../ada_lib/ada_lib_tests/list-ada_lib.txt"/>
+            <F N="../../ada_lib/ada_lib_tests/list-test_ada_lib.txt"/>
             <F N="../../ada_lib/ada_lib_tests/notes.txt"/>
             <F N="../../ada_lib/ada_lib_tests/project_paths.cfg"/>
             <F N="../../ada_lib/ada_lib_tests/remote_build.txt"/>

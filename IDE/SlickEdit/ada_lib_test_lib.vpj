@@ -1,6 +1,6 @@
 <!DOCTYPE Project SYSTEM "http://www.slickedit.com/dtd/vse/10.0/vpj.dtd">
 <Project
-    WorkingDir="../../../applications/video/camera/test_lib/"
+    WorkingDir="../../ada_lib/ada_lib_test_lib/"
     Version="10.0"
     VendorName="SlickEdit"
     TemplateName="Ada - GNU Ada Compiler"
@@ -12,52 +12,34 @@
         <Folder
             Name="Source Files"
             Filters="*.ada;*.adb;*.c;*.cpp"
-            GUID="{8B54DDAA-A589-4E4C-AF8D-B8D3FF31CDBE}"/>
+            GUID="{2CCAB6A1-E186-4934-9C56-D427C710A88D}"/>
         <Folder
             Name="Header Files"
             Filters="*.h;*.ads"
-            GUID="{443FA70F-0C8B-48CE-BF2B-AE214E09FB5F}"/>
+            GUID="{BEB66117-CE97-4D4A-8019-8FE2DA9E0C2A}"/>
         <Folder
             Name="Resource Files"
             Filters="*.def;*.res"
-            GUID="{F83FCB8B-1A93-4E09-89ED-C17768FAE00C}"/>
+            GUID="{B7163383-EA74-45E5-848B-F614C29F7E8F}"/>
         <Folder
             Name="Other Files"
             Filters="*.*"
-            GUID="{167CB412-4576-4578-9EA4-4FFBCED58F0E}"/>
+            GUID="{040AD204-2CA8-43D7-87F9-7650526B17A7}"/>
         <F
-            N="../../../applications/video/camera/test_lib/src/*.ad?"
-            Recurse="0"
-            Excludes=""
-            L="1"/>
-        <F N="../../../applications/video/camera/test_lib/alire.toml"/>
-        <F N="../../../applications/video/camera/test_lib/build.sh"/>
-        <F N="../../../applications/video/camera/test_lib/camera_test_lib.gpr"/>
-        <F N="../../../applications/video/camera/unit_test/help"/>
-        <F N="../../../applications/video/camera/unit_test/list-camera_aunit.txt"/>
-        <F N="../../../applications/video/camera/unit_test/run.sh"/>
-        <F N="../../../applications/video/camera/unit_test/suites"/>
-        <F N="../../../applications/video/camera/test_lib/config/test_lib_config.gpr"/>
+            N="../../ada_lib/ada_lib_test_lib/src/*.ad?"
+            Recurse="1"
+            Excludes=""/>
+        <F N="../../ada_lib/ada_lib_test_lib/ada_lib_test_lib.gpr"/>
+        <F N="../../ada_lib/ada_lib_test_lib/alire.toml"/>
+        <F N="../../ada_lib/ada_lib_test_lib/build.sh"/>
     </Files>
     <Config
         Name="Debug"
         Type="gnuc"
         DebugCallbackName="gdb"
-        OutputFile="camera_test_lib"
+        OutputFile="ada_lib_test_lib"
         CompilerConfigName="Latest Version">
         <Menu>
-            <Target
-                Name="Build"
-                MenuCaption="&amp;Build"
-                CaptureOutputWith="ProcessBuffer"
-                Deletable="0"
-                SaveOption="SaveWorkspaceFiles"
-                RunFromDir="%rw"
-                ClearProcessBuffer="1"
-                Verbose="1"
-                Beep="1">
-                <Exec CmdLine="./build.sh execute"/>
-            </Target>
             <Target
                 Name="Compile"
                 MenuCaption="&amp;Compile"
@@ -72,6 +54,18 @@
                 MenuCaption="&amp;Link"
                 Dialog="_gnuc_options_form Link">
                 <Exec CmdLine='gnat -g -o "%o" %f %libs'/>
+            </Target>
+            <Target
+                Name="Build"
+                MenuCaption="&amp;Build"
+                CaptureOutputWith="ProcessBuffer"
+                Deletable="0"
+                SaveOption="SaveWorkspaceFiles"
+                RunFromDir="%rw"
+                ClearProcessBuffer="1"
+                Verbose="1"
+                Beep="1">
+                <Exec CmdLine="./build.sh execute"/>
             </Target>
             <Target
                 Name="Rebuild"
@@ -148,21 +142,9 @@
         Name="Release"
         Type="gnuc"
         DebugCallbackName="gdb"
-        OutputFile="camera_test_lib"
+        OutputFile="ada_lib_test_lib"
         CompilerConfigName="Latest Version">
         <Menu>
-            <Target
-                Name="Build"
-                MenuCaption="&amp;Build"
-                CaptureOutputWith="ProcessBuffer"
-                Deletable="0"
-                SaveOption="SaveWorkspaceFiles"
-                RunFromDir="%rw"
-                ClearProcessBuffer="1"
-                Verbose="1"
-                Beep="1">
-                <Exec CmdLine="./build.sh execute"/>
-            </Target>
             <Target
                 Name="Compile"
                 MenuCaption="&amp;Compile"
@@ -177,6 +159,18 @@
                 MenuCaption="&amp;Link"
                 Dialog="_gnuc_options_form Link">
                 <Exec CmdLine='gnat -O -o "%o" %f %libs'/>
+            </Target>
+            <Target
+                Name="Build"
+                MenuCaption="&amp;Build"
+                CaptureOutputWith="ProcessBuffer"
+                Deletable="0"
+                SaveOption="SaveWorkspaceFiles"
+                RunFromDir="%rw"
+                ClearProcessBuffer="1"
+                Verbose="1"
+                Beep="1">
+                <Exec CmdLine="./build.sh execute"/>
             </Target>
             <Target
                 Name="Rebuild"

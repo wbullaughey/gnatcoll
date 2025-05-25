@@ -4,7 +4,7 @@
         <Project File="../Ada.vpj"/>
         <Project File="../ada_lib.vpj"/>
         <Project File="../ada_lib_aunit_tests.vpj"/>
-        <Project File="../ada_lib_gnoga.vpj"/>
+        <Project File="../ada_lib_test_lib.vpj"/>
         <Project File="../alias_list.vpj"/>
         <Project File="alr_environment.vpj"/>
         <Project File="../applications.vpj"/>
@@ -22,7 +22,9 @@
         <Project File="../gnat.vpj"/>
         <Project File="../gnatcoll.vpj"/>
         <Project File="../Gnoga.vpj"/>
+        <Project File="../gnoga_ada_lib.vpj"/>
         <Project File="../gnoga_examples.vpj"/>
+        <Project File="../gnoga_options.vpj"/>
         <Project File="../gpr.vpj"/>
         <Project File="../video.vpj"/>
         <Project File="video_aunit.vpj"/>

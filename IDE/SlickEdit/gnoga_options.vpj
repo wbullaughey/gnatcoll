@@ -1,49 +1,41 @@
 <!DOCTYPE Project SYSTEM "http://www.slickedit.com/dtd/vse/10.0/vpj.dtd">
 <Project
-    WorkingDir="../../../applications/video/camera/test_lib/"
+    WorkingDir="../../gnoga_options/"
     Version="10.0"
     VendorName="SlickEdit"
     TemplateName="Ada - GNU Ada Compiler"
-    Customized="1"
-    BuildSystem=""
-    BuildMakeFile=""
-    BuildMakeJobs="">
+    Customized="1">
     <Files>
         <Folder
             Name="Source Files"
             Filters="*.ada;*.adb;*.c;*.cpp"
-            GUID="{8B54DDAA-A589-4E4C-AF8D-B8D3FF31CDBE}"/>
+            GUID="{A5EC12AC-858F-4146-A89A-4AAD98F1ACE9}"/>
         <Folder
             Name="Header Files"
             Filters="*.h;*.ads"
-            GUID="{443FA70F-0C8B-48CE-BF2B-AE214E09FB5F}"/>
+            GUID="{4A6444D0-53E8-47F2-80B6-01F241F00D25}"/>
         <Folder
             Name="Resource Files"
             Filters="*.def;*.res"
-            GUID="{F83FCB8B-1A93-4E09-89ED-C17768FAE00C}"/>
+            GUID="{592BD0CC-A38C-450E-A187-C18CC70E5942}"/>
         <Folder
             Name="Other Files"
             Filters="*.*"
-            GUID="{167CB412-4576-4578-9EA4-4FFBCED58F0E}"/>
+            GUID="{33A85CF1-364E-442C-AFFC-A34660B17258}"/>
         <F
-            N="../../../applications/video/camera/test_lib/src/*.ad?"
-            Recurse="0"
-            Excludes=""
-            L="1"/>
-        <F N="../../../applications/video/camera/test_lib/alire.toml"/>
-        <F N="../../../applications/video/camera/test_lib/build.sh"/>
-        <F N="../../../applications/video/camera/test_lib/camera_test_lib.gpr"/>
-        <F N="../../../applications/video/camera/unit_test/help"/>
-        <F N="../../../applications/video/camera/unit_test/list-camera_aunit.txt"/>
-        <F N="../../../applications/video/camera/unit_test/run.sh"/>
-        <F N="../../../applications/video/camera/unit_test/suites"/>
-        <F N="../../../applications/video/camera/test_lib/config/test_lib_config.gpr"/>
+            N="../../gnoga_options/src/*.ad?"
+            Recurse="1"
+            Excludes=""/>
+        <F N="../../gnoga_options/alire.toml"/>
+        <F N="../../gnoga_options/build.sh"/>
+        <F N="../../gnoga_options/gnoga_options.gpr"/>
+        <F N="../../gnoga_options/config/gnoga_options_config.gpr"/>
     </Files>
     <Config
         Name="Debug"
         Type="gnuc"
         DebugCallbackName="gdb"
-        OutputFile="camera_test_lib"
+        OutputFile="gnoga_options"
         CompilerConfigName="Latest Version">
         <Menu>
             <Target
@@ -57,6 +49,15 @@
                 Verbose="1"
                 Beep="1">
                 <Exec CmdLine="./build.sh execute"/>
+            </Target>
+            <Target
+                Name="Build All"
+                MenuCaption="Build All"
+                SaveOption="SaveAll"
+                CaptureOutputWith="ProcessBuffer"
+                ClearProcessBuffer="1"
+                RunFromDir="/Users/wayne/Project/git/alr/alr_environment_redo_alr/gnoga_options/">
+                <Exec CmdLine="./build.sh all"/>
             </Target>
             <Target
                 Name="Compile"
@@ -148,7 +149,7 @@
         Name="Release"
         Type="gnuc"
         DebugCallbackName="gdb"
-        OutputFile="camera_test_lib"
+        OutputFile="gnoga_options"
         CompilerConfigName="Latest Version">
         <Menu>
             <Target
@@ -162,6 +163,15 @@
                 Verbose="1"
                 Beep="1">
                 <Exec CmdLine="./build.sh execute"/>
+            </Target>
+            <Target
+                Name="Build All"
+                MenuCaption="Build All"
+                SaveOption="SaveAll"
+                CaptureOutputWith="ProcessBuffer"
+                ClearProcessBuffer="1"
+                RunFromDir="/Users/wayne/Project/git/alr/alr_environment_redo_alr/gnoga_options/">
+                <Exec CmdLine="./build.sh all"/>
             </Target>
             <Target
                 Name="Compile"

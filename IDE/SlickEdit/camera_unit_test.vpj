@@ -18,7 +18,6 @@
             GUID="{3B9B0AB7-247E-43B8-8E87-0610E4912511}">
             <F N="../../ada_lib/ada_lib_tests/src/ada_lib-options-aunit_lib.ads"/>
             <F N="../../applications/video/camera/lib/src/camera-command_queue.ads"/>
-            <F N="../../applications/video/camera/camera-controller.ads"/>
         </Folder>
         <Folder
             Name="Resource Files"
@@ -67,10 +66,8 @@
         <F N="../../applications/video/camera/unit_test/load_test_setup.cfg"/>
         <F N="../../applications/video/camera/unit_test/project_paths.cfg"/>
         <F N="../../applications/video/camera/unit_test/remote_build.txt"/>
-        <F N="../../applications/video/camera/unit_test/repeat.sh"/>
         <F N="../../applications/video/camera/unit_test/run.sh"/>
         <F N="../../applications/video/camera/unit_test/suites"/>
-        <F N="../../video/lib/video_aunit/test-macosx"/>
     </Files>
     <Config
         Name="Debug"
@@ -85,10 +82,10 @@
                 CaptureOutputWith="ProcessBuffer"
                 Deletable="0"
                 SaveOption="SaveWorkspaceFiles"
-                RunFromDir="/Users/wayne/Project/git/alr/alr_environment/applications/video/camera/unit_test/"
                 ClearProcessBuffer="1"
                 Verbose="1"
-                Beep="1">
+                Beep="1"
+                RunFromDir="%rw">
                 <Exec CmdLine="./build.sh execute"/>
             </Target>
             <Target
@@ -210,10 +207,10 @@
                 CaptureOutputWith="ProcessBuffer"
                 Deletable="0"
                 SaveOption="SaveWorkspaceFiles"
-                RunFromDir="/Users/wayne/Project/git/alr/alr_environment/applications/video/camera/unit_test/"
                 ClearProcessBuffer="1"
                 Verbose="1"
-                Beep="1">
+                Beep="1"
+                RunFromDir="%rw">
                 <Exec CmdLine="./build.sh execute"/>
             </Target>
             <Target

@@ -1,4 +1,4 @@
-name = "alr_environment"
+name = "gnoga_ada_lib"
 description = ""
 version = "0.1.0-dev"
 
@@ -8,3 +8,10 @@ maintainers-logins = ["github-username"]
 licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
 website = ""
 tags = []
+
+[[depends-on]]
+gnoga = "~0.1.0-dev"
+
+[[pins]]
+gnoga = { path='../vendor/github.com/gnoga' }
+
