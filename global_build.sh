@@ -97,6 +97,12 @@ case $BUILD_MODE in
       echo both execute and help_test built
       ;;
 
+   both)
+      echo build both
+      build $DIRECTORY execute
+      build $DIRECTORY help_test
+      ;;
+
    execute)
       echo build execute
       build $DIRECTORY $BUILD_MODE

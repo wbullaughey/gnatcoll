@@ -15,7 +15,7 @@ package body GNOGA_Options is
    Options_With_Parameters          : aliased constant
                                        Ada_Lib.Options.Options_Type :=
                                           Ada_Lib.Options.Create_Options (
-                                             Trace_Option & 'w',
+                                             Trace_Option,
                                              Ada_Lib.Options.Unmodified);
 -- Options_Without_Parameters       : aliased constant
 --                                     Ada_Lib.Options.Options_Type :=
@@ -31,11 +31,11 @@ package body GNOGA_Options is
    begin
       Log_In (Debug or Trace_Options);
       GNOGA_Options := Options'unchecked_access;
+--    Ada_Lib.Options.Runstring.Options.Register (
+--       Ada_Lib.Options.Runstring.With_Parameters,
+--       Options_With_Parameters);
       Ada_Lib.Options.Runstring.Options.Register (
-         Ada_Lib.Options.Runstring.With_Parameters,
-         Options_With_Parameters);
---    Ada_Lib.Options.Runstring.Options.Register (Ada_Lib.Options.Runstring.Without_Parameters,
---       Options_Without_Parameters);
+         Ada_Lib.Options.Runstring.With_Parameters, Options_With_Parameters);
       return Log_Out (Ada_Lib.Options.Actual.Nested_Options_Type (
          Options).Initialize, Debug or Trace_Options);
    end Initialize;
@@ -108,8 +108,8 @@ package body GNOGA_Options is
 
       when Ada_Lib.Options.Traces =>
          Put_Line ("GNOGA_Options library trace options (-" & Trace_Option & ")");
-         Put_Line ("      a               all");
-         Put_Line ("      m               GNOGA.Ada_Lib.Trace");
+--       Put_Line ("      a               all");
+--       Put_Line ("      m               GNOGA.Ada_Lib.Trace");
          Put_Line ("      o               GNOGA options");
          New_Line;
 

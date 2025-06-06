@@ -57,6 +57,7 @@
         <F N="../../applications/video/camera/unit_test/build.txt"/>
         <F N="../../applications/video/camera/unit_test/camera_tests.gpr"/>
         <F N="../../applications/video/camera/unit_test/config/camera_tests_config.gpr"/>
+        <F N="../../../../../../tmp/compile.txt"/>
         <F N="../../../../../../bin/debugvs.sh"/>
         <F N="../../applications/video/camera/unit_test/driver_test.sh"/>
         <F N="../../applications/video/camera/driver/help"/>
@@ -98,11 +99,24 @@
                 <Exec CmdLine="./build.sh help_test"/>
             </Target>
             <Target
+                Name="Rebuild"
+                MenuCaption="&amp;Rebuild"
+                CaptureOutputWith="ProcessBuffer"
+                Deletable="0"
+                SaveOption="SaveWorkspaceFiles"
+                RunFromDir="%rw"
+                ClearProcessBuffer="1"
+                Verbose="1"
+                Beep="1">
+                <Exec CmdLine="./build.sh both"/>
+            </Target>
+            <Target
                 Name="Build All"
                 MenuCaption="Build All"
-                RunFromDir="/Users/wayne/Project/git/alr/alr_environment/applications/video/camera/unit_test/"
+                RunFromDir="/Users/wayne/Project/git/alr/alr_environment_redo_alr/applications/video/camera/unit_test/"
                 CaptureOutputWith="ProcessBuffer"
-                SaveOption="SaveWorkspaceFiles">
+                SaveOption="SaveWorkspaceFiles"
+                ClearProcessBuffer="1">
                 <Exec CmdLine="./build.sh all"/>
             </Target>
             <Target
@@ -119,18 +133,6 @@
                 MenuCaption="&amp;Link"
                 Dialog="_gnuc_options_form Link">
                 <Exec CmdLine='gnat -g -o "%o" %f %libs'/>
-            </Target>
-            <Target
-                Name="Rebuild"
-                MenuCaption="&amp;Rebuild"
-                CaptureOutputWith="ProcessBuffer"
-                Deletable="0"
-                SaveOption="SaveWorkspaceFiles"
-                RunFromDir="/Users/wayne/Project/git/alr/alr_environment"
-                ClearProcessBuffer="1"
-                Verbose="1"
-                Beep="1">
-                <Exec CmdLine="./build_all.sh"/>
             </Target>
             <Target
                 Name="Debug"
@@ -223,11 +225,24 @@
                 <Exec CmdLine="./build.sh help_test"/>
             </Target>
             <Target
+                Name="Rebuild"
+                MenuCaption="&amp;Rebuild"
+                CaptureOutputWith="ProcessBuffer"
+                Deletable="0"
+                SaveOption="SaveWorkspaceFiles"
+                RunFromDir="%rw"
+                ClearProcessBuffer="1"
+                Verbose="1"
+                Beep="1">
+                <Exec CmdLine="./build.sh both"/>
+            </Target>
+            <Target
                 Name="Build All"
                 MenuCaption="Build All"
-                RunFromDir="/Users/wayne/Project/git/alr/alr_environment/applications/video/camera/unit_test/"
+                RunFromDir="/Users/wayne/Project/git/alr/alr_environment_redo_alr/applications/video/camera/unit_test/"
                 CaptureOutputWith="ProcessBuffer"
-                SaveOption="SaveWorkspaceFiles">
+                SaveOption="SaveWorkspaceFiles"
+                ClearProcessBuffer="1">
                 <Exec CmdLine="./build.sh all"/>
             </Target>
             <Target
@@ -244,18 +259,6 @@
                 MenuCaption="&amp;Link"
                 Dialog="_gnuc_options_form Link">
                 <Exec CmdLine='gnat -O -o "%o" %f %libs'/>
-            </Target>
-            <Target
-                Name="Rebuild"
-                MenuCaption="&amp;Rebuild"
-                CaptureOutputWith="ProcessBuffer"
-                Deletable="0"
-                SaveOption="SaveWorkspaceFiles"
-                RunFromDir="/Users/wayne/Project/git/alr/alr_environment"
-                ClearProcessBuffer="1"
-                Verbose="1"
-                Beep="1">
-                <Exec CmdLine="./build_all.sh"/>
             </Target>
             <Target
                 Name="Debug"
