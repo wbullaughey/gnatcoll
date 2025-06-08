@@ -51,7 +51,7 @@ package body GNOGA_Options is
    ----------------------------------------------------------------------------
 
    begin
-      Log_In (Debug or Trace_Options, " option" & Option.Image);
+      Log_In (Debug or Trace_Options, " option " & Option.Image);
       if Ada_Lib.Options.Has_Option (Option, Options_With_Parameters,
             Ada_Lib.Options.Null_Options) then
          case Option.Kind is
