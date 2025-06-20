@@ -50,6 +50,7 @@
         <F N="../../../applications/video/camera/run_camera.sh"/>
         <F N="../../../applications/video/camera/setup.cfg"/>
         <F N="../../../applications/video/camera/state.cfg"/>
+        <F N="../../../applications/video/camera/TRACE.txt"/>
         <F N="../../../applications/video/camera/types.note"/>
     </Files>
     <Config

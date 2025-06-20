@@ -1,13 +1,12 @@
 source ~/.zshrc
-export BUILD_MODE=$1
-export UNIT_TEST=$2
-export BUILD_PROFILE=$3
-export KIND=$4
+export WHICH=$1         # all | both | execute | help_test
+export BUILD_PROFILE=$2
+export KIND=$3
 export DIRECTORY=`pwd`
 export SCRIPT_DIR=$(dirname ${0:A})
 #export DEBUG_OPTIONS=-vv -d --verbose
 
-# BUILD_MODE values
+# WHICH values
 #   all     - build everything (help_tests, driver unit tests, applications)
 #   execute    - build application or library for subdirectory level
 #   help_test  - builds help_test at level
@@ -17,8 +16,8 @@ export SCRIPT_DIR=$(dirname ${0:A})
 #   exit
 #fi
 
-echo global build BUILD_MODE $BUILD_MODE UNIT_TEST $UNIT_TEST \
-   BUILD_PROFILE $BUILD_PROFILE SCRIPT_DIR $SCRIPT_DIR KIND $KIND
+echo global build WHICH $WHICH BUILD_PROFILE $BUILD_PROFILE \
+   SCRIPT_DIR $SCRIPT_DIR KIND $KIND
 
 case $KIND in
 
@@ -51,8 +50,7 @@ function build () {
          exit
       fi
    #  echo building `pwd` mode $MODE
-      COMMAND="alr $DEBUG_OPTIONS build -- -j10 -s -k -gnatE -XBUILD_MODE=$MODE \
-         -XUNIT_TEST=$UNIT_TEST -XBUILD_PROFILE=$BUILD_PROFILE "
+      COMMAND="alr $DEBUG_OPTIONS build -- -j10 -s -k -gnatE -vl -v "
 
       echo COMMAND $COMMAND
       $COMMAND
@@ -88,7 +86,7 @@ function build_all () {
    popd
 }
 
-case $BUILD_MODE in
+case $WHICH in
 
    all)
       echo build all
@@ -105,16 +103,16 @@ case $BUILD_MODE in
 
    execute)
       echo build execute
-      build $DIRECTORY $BUILD_MODE
+      build $DIRECTORY $WHICH
       ;;
 
    help_test)
       echo build help test
-      build $DIRECTORY $BUILD_MODE
+      build $DIRECTORY $WHICH
       ;;
 
    *)
-      echo missing or bad BUILD_MODE
+      echo missing or bad WHICH
       exit;
       ;;
 

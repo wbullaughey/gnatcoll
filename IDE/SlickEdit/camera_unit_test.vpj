@@ -69,6 +69,7 @@
         <F N="../../applications/video/camera/unit_test/remote_build.txt"/>
         <F N="../../applications/video/camera/unit_test/run.sh"/>
         <F N="../../applications/video/camera/unit_test/suites"/>
+        <F N="../../applications/video/camera/unit_test/TRACE.txt"/>
     </Files>
     <Config
         Name="Debug"
@@ -92,7 +93,7 @@
             <Target
                 Name="build help_test"
                 MenuCaption="build help_test"
-                RunFromDir="/Users/wayne/Project/git/alr/alr_environment/applications/video/camera/unit_test/"
+                RunFromDir="/Users/wayne/Project/git/alr/alr_environment_redo_alr/applications/video/camera/unit_test/"
                 CaptureOutputWith="ProcessBuffer"
                 SaveOption="SaveWorkspaceFiles"
                 ClearProcessBuffer="1">
@@ -218,7 +219,7 @@
             <Target
                 Name="build help_test"
                 MenuCaption="build help_test"
-                RunFromDir="/Users/wayne/Project/git/alr/alr_environment/applications/video/camera/unit_test/"
+                RunFromDir="/Users/wayne/Project/git/alr/alr_environment_redo_alr/applications/video/camera/unit_test/"
                 CaptureOutputWith="ProcessBuffer"
                 SaveOption="SaveWorkspaceFiles"
                 ClearProcessBuffer="1">
