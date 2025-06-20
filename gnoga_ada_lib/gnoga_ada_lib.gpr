@@ -1,4 +1,3 @@
-with "gnoga.gpr";
 with "config/gnoga_ada_lib_config.gpr";
 with "default_config.gpr";
 

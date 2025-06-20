@@ -2,7 +2,7 @@ with Gnoga.Gui.Base;
 -- with Gnoga.Gui.Element.Common;
 -- with Gnoga.Types;
 
-package GNOGA.Ada_Lib.Interfaces is
+package GNOGA_Ada_Lib.Interfaces is
 
    Fault                         : exception;
 
@@ -33,4 +33,4 @@ package GNOGA.Ada_Lib.Interfaces is
       Mouse_Event                : in     Standard.gnoga.Gui.Base.Mouse_Event_Record
    ) return String;
 
-end GNOGA.Ada_Lib.Interfaces;
+end GNOGA_Ada_Lib.Interfaces;

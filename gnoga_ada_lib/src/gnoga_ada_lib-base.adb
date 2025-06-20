@@ -4,8 +4,9 @@ with Ada.Task_Identification;
 with Ada_Lib.Trace; use Ada_Lib.Trace;
 with Ada_Lib.Trace_Tasks;
 -- with Gnoga.Application.Multi_Connect;
+with GNOGA_Options;
 
-package body GNOGA.Ada_Lib.Base is
+package body GNOGA_Ada_Lib.Base is
 
    task type Message_Loop_Task;
 
@@ -14,6 +15,7 @@ package body GNOGA.Ada_Lib.Base is
    use type Ada.Task_Identification.Task_Id;
 
 -- Base_State                    : Base_Class_Access := Null;
+   Debug                         : Boolean renames GNOGA_Options.GNOGA_Ada_Lib_Debug;
    GNOGA_Initialized             : Boolean := False;  -- can only be done once per program
    Main_Created                  : Boolean := False;
    Message_Loop                  : Message_Loop_Access := Null;
@@ -196,6 +198,6 @@ package body GNOGA.Ada_Lib.Base is
 
 --begin
 --log_here;
-end GNOGA.Ada_Lib.Base;
+end GNOGA_Ada_Lib.Base;
 
 

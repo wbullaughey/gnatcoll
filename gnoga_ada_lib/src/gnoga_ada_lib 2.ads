@@ -4,7 +4,7 @@ with GNAT.Source_Info;
 with Gnoga.Gui.Window;
 with Gnoga.Types;
 
-package Gnoga.Ada_Lib is
+package GNOGA_Ada_Lib is
 
    procedure Clear_Connection_Data
    with Pre => Has_Connection_Data;
@@ -51,4 +51,4 @@ package Gnoga.Ada_Lib is
 
 -- Trace                         : Boolean := False;
 
-end Gnoga.Ada_Lib;
+end GNOGA_Ada_Lib;

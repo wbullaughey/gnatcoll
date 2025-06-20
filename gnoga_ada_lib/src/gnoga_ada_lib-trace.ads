@@ -1,7 +1,7 @@
 with GNAT.Source_Info;
 with Gnoga.Gui.Base;
 
-package Gnoga.Ada_Lib.Trace is
+package GNOGA_Ada_Lib.Trace is
 
    procedure Dump (
       Object                     : in     Gnoga.Gui.Base.Base_Type;
@@ -12,4 +12,4 @@ package Gnoga.Ada_Lib.Trace is
       Object                     : in     Gnoga.Gui.Base.Base_Type;
       From                       : in     String := GNAT.Source_Info.Source_Location);
 
-end Gnoga.Ada_Lib.Trace;
+end GNOGA_Ada_Lib.Trace;

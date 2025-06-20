@@ -1,7 +1,9 @@
+with GNOGA_Options;
 with Ada_Lib.Trace; use Ada_Lib.Trace;
 
-package body GNOGA.Ada_Lib is
+package body GNOGA_Ada_Lib is
 
+   Debug                         : Boolean renames GNOGA_Options.GNOGA_Ada_Lib_Debug;
    Program_Connection_Data       : Connection_Data_Class_Access := Null;
 
    ---------------------------------------------------------------
@@ -91,6 +93,6 @@ begin
 --debug := True;
    Standard.Ada_Lib.Trace.Log_Here (Debug);
 
-end GNOGA.Ada_Lib;
+end GNOGA_Ada_Lib;
 
 

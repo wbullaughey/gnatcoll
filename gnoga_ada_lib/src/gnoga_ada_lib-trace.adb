@@ -1,6 +1,6 @@
 with Ada.Text_IO; use Ada.Text_IO;
 
-package body Gnoga.Ada_Lib.Trace is
+package body GNOGA_Ada_Lib.Trace is
 
    -------------------------------------------------------------------
    procedure Dump (
@@ -31,4 +31,4 @@ package body Gnoga.Ada_Lib.Trace is
       end if;
    end Dump;
 
-end Gnoga.Ada_Lib.Trace;
+end GNOGA_Ada_Lib.Trace;

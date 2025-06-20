@@ -5,7 +5,7 @@ with Ada_Lib.Strings;
 -- with Ada_Lib.Trace; use Ada_Lib.Trace;
 --with Gnoga.Gui.Base;
 
-package body GNOGA.Ada_Lib.Interfaces is
+package body GNOGA_Ada_Lib.Interfaces is
 
    use type Standard.Ada_Lib.Strings.String_Access;
 
@@ -136,4 +136,4 @@ package body GNOGA.Ada_Lib.Interfaces is
             " " & Mouse_Event.Message'img;
    end Mouse_Event_Image;
 
-end GNOGA.Ada_Lib.Interfaces;
+end GNOGA_Ada_Lib.Interfaces;

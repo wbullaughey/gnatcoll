@@ -1,7 +1,7 @@
 with Ada_Lib.Socket_IO;
 with Gnoga.Application.Multi_Connect;
 
-package GNOGA.Ada_Lib.Base is
+package GNOGA_Ada_Lib.Base is
 
    Failed                        : exception;
 
@@ -26,5 +26,5 @@ package GNOGA.Ada_Lib.Base is
    procedure Set_Main_Created (
       Value                      : in     Boolean);
 
-end GNOGA.Ada_Lib.Base;
+end GNOGA_Ada_Lib.Base;
 
