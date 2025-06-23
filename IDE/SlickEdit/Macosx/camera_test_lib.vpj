@@ -31,13 +31,14 @@
             Excludes=""
             L="1"/>
         <F N="../../../applications/video/camera/test_lib/alire.toml"/>
+        <F N="../../../ada_lib/ada_lib_test_lib/build.sh"/>
         <F N="../../../applications/video/camera/test_lib/build.sh"/>
         <F N="../../../applications/video/camera/test_lib/camera_test_lib.gpr"/>
+        <F N="../../../applications/video/camera/test_lib/config/camera_test_lib_config.gpr"/>
         <F N="../../../applications/video/camera/unit_test/help"/>
         <F N="../../../applications/video/camera/unit_test/list-camera_aunit.txt"/>
         <F N="../../../applications/video/camera/unit_test/run.sh"/>
         <F N="../../../applications/video/camera/unit_test/suites"/>
-        <F N="../../../applications/video/camera/test_lib/config/test_lib_config.gpr"/>
     </Files>
     <Config
         Name="Debug"

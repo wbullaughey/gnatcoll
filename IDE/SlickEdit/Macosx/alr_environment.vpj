@@ -42,6 +42,8 @@
         <F N="../../../list-help_tests.txt"/>
         <F N="../../../list-run_all_unit_tests.txt"/>
         <F N="../../../remote_build.sh"/>
+        <F N="routines.sh"/>
+        <F N="../../../routines.sh"/>
         <F N="../../../rsync.sh"/>
         <F N="../../../run_all_apps.sh"/>
     </Files>

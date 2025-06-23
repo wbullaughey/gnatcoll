@@ -1,6 +1,6 @@
 <!DOCTYPE Project SYSTEM "http://www.slickedit.com/dtd/vse/10.0/vpj.dtd">
 <Project
-    WorkingDir="."
+    WorkingDir="../../applications/video/camera/unit_test/"
     Version="10.0"
     VendorName="SlickEdit"
     TemplateName="Ada - GNU Ada Compiler"

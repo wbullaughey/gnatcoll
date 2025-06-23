@@ -11,7 +11,6 @@
         <Project File="../aunit.vpj"/>
         <Project File="camera.vpj"/>
         <Project File="../camera_lib.vpj"/>
-        <Project File="../camera_lib_unit_test.vpj"/>
         <Project File="../camera_test_driver.vpj"/>
         <Project File="camera_test_lib.vpj"/>
         <Project File="../camera_unit_test.vpj"/>
@@ -26,8 +25,6 @@
         <Project File="../gnoga_examples.vpj"/>
         <Project File="../gnoga_options.vpj"/>
         <Project File="../gpr.vpj"/>
-        <Project File="../video.vpj"/>
-        <Project File="video_aunit.vpj"/>
         <Project File="../video_lib.vpj"/>
     </Projects>
 </Workspace>

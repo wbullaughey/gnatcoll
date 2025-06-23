@@ -36,7 +36,6 @@ function output() {
    export APPEND_OUTPUT=-a  # append from now on
 }
 
-
 # Function to extract first field and update global RUN_PARAMETERS
 parse() {
     # Check if global string is empty
