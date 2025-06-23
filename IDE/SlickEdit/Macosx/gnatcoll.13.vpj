@@ -1,6 +1,6 @@
 <!DOCTYPE Project SYSTEM "http://www.slickedit.com/dtd/vse/10.0/vpj.dtd">
 <Project
-    WorkingDir="../../../../../../GNAT/gnatcoll-core/"
+    WorkingDir="../../../../../../../GNAT/gnatcoll.13/"
     Version="10.0"
     VendorName="SlickEdit"
     TemplateName="Ada - GNU Ada Compiler"
@@ -12,49 +12,35 @@
         <Folder
             Name="Source Files"
             Filters="*.ada;*.adb;*.c;*.cpp"
-            GUID="{AAEE8D16-5723-402D-B591-D265B6E6AA1E}"/>
+            GUID="{76F4CD67-8BE2-4C0F-A4D7-4DD399C186B8}"/>
         <Folder
             Name="Header Files"
             Filters="*.h;*.ads"
-            GUID="{F4593954-2D1F-4D9B-A529-39F5FB6A41AB}"/>
+            GUID="{7143173D-EA7D-4C63-8D83-2E519D926664}"/>
         <Folder
             Name="Resource Files"
             Filters="*.def;*.res"
-            GUID="{BE4B9152-3322-438C-9558-4B68BB5CDC87}"/>
+            GUID="{6427EC94-2765-4427-8EF9-71DC65A0968D}"/>
         <Folder
             Name="Other Files"
             Filters="*.*"
-            GUID="{7F8DE9E4-5B02-405C-8D2D-31056438F67D}"/>
+            GUID="{3F1D64AC-2611-40B4-8755-50BB7EC51067}"/>
         <F
-            N="../../../../../../GNAT/gnatcoll-core/core/src/*.ad?"
+            N="../../../../../../../GNAT/gnatcoll.13/src/gnatcoll/*.ad?"
             Recurse="1"
             Excludes="*.a;*.o;*.ali"/>
-        <F
-            N="../../../../../../GNAT/gnatcoll-core/projects/*.ad?"
-            Recurse="1"
-            Excludes="*.a;*.o;*.ali"/>
-        <F N="../../../../../../GNAT/gnatcoll-core/alire.toml"/>
-        <F N="../../../../../../GNAT/gnatcoll-core/build.sh"/>
+        <F N="../../../../../../../GNAT/gnatcoll.13/.gitignore"/>
+        <F N="../../../../../../../GNAT/gnatcoll.13/alire.toml"/>
+        <F N="../../../../../../../GNAT/gnatcoll.13/build.sh"/>
+        <F N="../../../../../../../GNAT/gnatcoll.13/gnatcoll.gpr"/>
     </Files>
     <Config
         Name="Debug"
         Type="gnuc"
         DebugCallbackName="gdb"
-        OutputFile=""
+        OutputFile="gnatcoll"
         CompilerConfigName="Latest Version">
         <Menu>
-            <Target
-                Name="Build"
-                MenuCaption="&amp;Build"
-                CaptureOutputWith="ProcessBuffer"
-                Deletable="0"
-                SaveOption="SaveWorkspaceFiles"
-                RunFromDir="%rw"
-                ClearProcessBuffer="1"
-                Verbose="1"
-                Beep="1">
-                <Exec CmdLine="./build.sh"/>
-            </Target>
             <Target
                 Name="Compile"
                 MenuCaption="&amp;Compile"
@@ -71,6 +57,18 @@
                 <Exec CmdLine='gnat -g -o "%o" %f %libs'/>
             </Target>
             <Target
+                Name="Build"
+                MenuCaption="&amp;Build"
+                CaptureOutputWith="ProcessBuffer"
+                Deletable="0"
+                SaveOption="SaveWorkspaceFiles"
+                RunFromDir="%rw"
+                ClearProcessBuffer="1"
+                Verbose="1"
+                Beep="1">
+                <Exec CmdLine="./build.sh"/>
+            </Target>
+            <Target
                 Name="Rebuild"
                 MenuCaption="&amp;Rebuild"
                 CaptureOutputWith="ProcessBuffer"
@@ -118,12 +116,44 @@
                     Type="Slick-C"/>
             </Target>
             <Target
-                Name="Install"
-                MenuCaption="Install"
-                RunFromDir="/Users/wayne/vendor/gprbuild/"
+                Name="Help_Test"
+                MenuCaption="Help_Test"
+                RunFromDir="%rw"
                 CaptureOutputWith="ProcessBuffer"
                 SaveOption="SaveWorkspaceFiles">
-                <Exec CmdLine="./build.sh install"/>
+                <Exec CmdLine="./build.sh help_test"/>
+            </Target>
+            <Target
+                Name="build all"
+                MenuCaption="build all"
+                RunFromDir="%rw"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveWorkspaceFiles">
+                <Exec CmdLine="./build.sh all"/>
+            </Target>
+            <Target
+                Name="Build All"
+                MenuCaption="Build All"
+                RunFromDir="/Users/wayne/Project/git/alr/alr_environment/applications/video/camera/unit_test/"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveWorkspaceFiles">
+                <Exec CmdLine="./build.sh all"/>
+            </Target>
+            <Target
+                Name="build help_test"
+                MenuCaption="build help_test"
+                RunFromDir="/Users/wayne/Project/git/alr/alr_environment/applications/video/camera/unit_test/"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveWorkspaceFiles">
+                <Exec CmdLine="./build.sh execute help_test"/>
+            </Target>
+            <Target
+                Name="build help_test"
+                MenuCaption="build help_test"
+                RunFromDir="%rw"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveWorkspaceFiles">
+                <Exec CmdLine="./build.sh help_test"/>
             </Target>
         </Menu>
         <Rules Name="Compile">
@@ -140,29 +170,14 @@
                 <Exec CmdLine='gnat -c -g -o "%bd%n.o" "%f"'/>
             </Rule>
         </Rules>
-        <PreBuildCommands>
-            <Exec CmdLine="PATH=/Users/wayne/alr/bin:/Users/wayne/GNAT/2020/bin:$PATH:/usr/local/bin:/Users/wayne/bin"/>
-        </PreBuildCommands>
     </Config>
     <Config
         Name="Release"
         Type="gnuc"
         DebugCallbackName="gdb"
-        OutputFile=""
+        OutputFile="gnatcoll"
         CompilerConfigName="Latest Version">
         <Menu>
-            <Target
-                Name="Build"
-                MenuCaption="&amp;Build"
-                CaptureOutputWith="ProcessBuffer"
-                Deletable="0"
-                SaveOption="SaveWorkspaceFiles"
-                RunFromDir="%rw"
-                ClearProcessBuffer="1"
-                Verbose="1"
-                Beep="1">
-                <Exec CmdLine="./build.sh"/>
-            </Target>
             <Target
                 Name="Compile"
                 MenuCaption="&amp;Compile"
@@ -179,6 +194,18 @@
                 <Exec CmdLine='gnat -O -o "%o" %f %libs'/>
             </Target>
             <Target
+                Name="Build"
+                MenuCaption="&amp;Build"
+                CaptureOutputWith="ProcessBuffer"
+                Deletable="0"
+                SaveOption="SaveWorkspaceFiles"
+                RunFromDir="%rw"
+                ClearProcessBuffer="1"
+                Verbose="1"
+                Beep="1">
+                <Exec CmdLine="./build.sh"/>
+            </Target>
+            <Target
                 Name="Rebuild"
                 MenuCaption="&amp;Rebuild"
                 CaptureOutputWith="ProcessBuffer"
@@ -226,12 +253,44 @@
                     Type="Slick-C"/>
             </Target>
             <Target
-                Name="Install"
-                MenuCaption="Install"
-                RunFromDir="/Users/wayne/vendor/gprbuild/"
+                Name="Help_Test"
+                MenuCaption="Help_Test"
+                RunFromDir="%rw"
                 CaptureOutputWith="ProcessBuffer"
                 SaveOption="SaveWorkspaceFiles">
-                <Exec CmdLine="./build.sh install"/>
+                <Exec CmdLine="./build.sh help_test"/>
+            </Target>
+            <Target
+                Name="build all"
+                MenuCaption="build all"
+                RunFromDir="%rw"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveWorkspaceFiles">
+                <Exec CmdLine="./build.sh all"/>
+            </Target>
+            <Target
+                Name="Build All"
+                MenuCaption="Build All"
+                RunFromDir="/Users/wayne/Project/git/alr/alr_environment/applications/video/camera/unit_test/"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveWorkspaceFiles">
+                <Exec CmdLine="./build.sh all"/>
+            </Target>
+            <Target
+                Name="build help_test"
+                MenuCaption="build help_test"
+                RunFromDir="/Users/wayne/Project/git/alr/alr_environment/applications/video/camera/unit_test/"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveWorkspaceFiles">
+                <Exec CmdLine="./build.sh execute help_test"/>
+            </Target>
+            <Target
+                Name="build help_test"
+                MenuCaption="build help_test"
+                RunFromDir="%rw"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveWorkspaceFiles">
+                <Exec CmdLine="./build.sh help_test"/>
             </Target>
         </Menu>
         <Rules Name="Compile">
@@ -248,9 +307,6 @@
                 <Exec CmdLine='gnat -O -c -o "%bd%n.o" "%f"'/>
             </Rule>
         </Rules>
-        <PreBuildCommands>
-            <Exec CmdLine="PATH=/Users/wayne/alr/bin:/Users/wayne/GNAT/2020/bin:$PATH:/usr/local/bin:/Users/wayne/bin"/>
-        </PreBuildCommands>
     </Config>
     <List Name="RTE">
     </List>

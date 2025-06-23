@@ -114,7 +114,7 @@
             <Target
                 Name="Build All"
                 MenuCaption="Build All"
-                RunFromDir="/Users/wayne/Project/git/alr/alr_environment_redo_alr/applications/video/camera/unit_test/"
+                RunFromDir="../../../applications/video/camera/unit_test/"
                 CaptureOutputWith="ProcessBuffer"
                 SaveOption="SaveWorkspaceFiles"
                 ClearProcessBuffer="1">
@@ -240,7 +240,7 @@
             <Target
                 Name="Build All"
                 MenuCaption="Build All"
-                RunFromDir="/Users/wayne/Project/git/alr/alr_environment_redo_alr/applications/video/camera/unit_test/"
+                RunFromDir="../../../applications/video/camera/unit_test/"
                 CaptureOutputWith="ProcessBuffer"
                 SaveOption="SaveWorkspaceFiles"
                 ClearProcessBuffer="1">

@@ -19,6 +19,7 @@
         <Project File="../Driver_Lib.vpj"/>
         <Project File="../driver_unit_test.vpj"/>
         <Project File="../gnat.vpj"/>
+        <Project File="gnatcoll.13.vpj"/>
         <Project File="../gnatcoll.vpj"/>
         <Project File="../Gnoga.vpj"/>
         <Project File="../gnoga_ada_lib.vpj"/>
