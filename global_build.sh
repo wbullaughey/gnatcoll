@@ -77,7 +77,7 @@ function build () {
          exit
       fi
    #  echo building `pwd` mode $MODE
-      COMMAND="alr $DEBUG_OPTIONS build -- -j10 -s -k -gnatE -vl -v $ALR_OPTIONS"
+      COMMAND="alr $DEBUG_OPTIONS build -- -j10 -s -k -gnatE -vl -v $ALR_OPTIONS Build_Host=desktop"
 
       echo COMMAND $COMMAND
       $COMMAND
