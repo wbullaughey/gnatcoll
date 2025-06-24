@@ -1,0 +1,33 @@
+#!/bin/zsh
+echo running .zshrc at `pwd`
+#export PATH="/Users/wayne/alr/bin:/opt/gcc-13.1.0/bin:$PATH:/usr/local/bin:/Users/wayne/bin"
+#export PATH="$PATH:/usr/local/bin:/Users/wayne/bin"
+export PATH="/opt/gcc-14.2.0-3-aarch64/bin:/usr/local/bin:/Users/wayne/bin:/opt/homebrew/bin:/Users/wayne/GNAT/gprbuild:$PATH"
+#export PATH="/opt/gcc14/bin:/usr/local/bin:/Users/wayne/bin:/opt/homebrew/bin:/Users/wayne/GNAT/gprbuild:$PATH"
+#export PATH="/Users/wayne/bin:/Users/wayne/GNAT/bin:/usr/local/bin:/Users/wayne/bin:/opt/gcc-14.2.0-3-aarch64/bin:/opt/homebrew/bin:$PATH"
+#export PATH="/Users/wayne/alr/bin:/Users/wayne/GNAT/gnat-x86_64-darwin-12.2.0-1/bin:/Users/wayne/GNAT/gprbuild-x86_64-darwin-21.0.0-2/bin/gprbuild:$PATH:/usr/local/bin:/Users/wayne/bin:/Users/wayne/GNAT/20.2/bin/"
+#export PATH="/Users/wayne/alr/bin:/Users/wayne/GNAT/2020/bin:$PATH:/usr/local/bin:/Users/wayne/bin"
+#export PATH=/Users/wayne/alr/bin:/opt/gcc-11.2.0/bin:$PATH:/usr/local/bin:/Users/wayne/bin
+export OS_VERSION=`sw_vers | grep ProductVersion | cut -d':' -f2 | sed 's/\t//g'`
+[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code -- --locate-shell-integration-path zsh)"
+export Legacy="Ada2012"
+export ADA_APPLICATION_PROFILE=local
+export C_INCLUDE_PATH=/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include:$C_INCLUDE_PATH
+export ADA_OS_INCLUDE=macosx
+# export GPR_PROJECT_PATH="/Users/wayne/GNAT/gnatcoll-core"
+#echo "path $PATH"
+alias ghist='history 0 | grep $1'
+alias ada_lib='pushd ~/Project/git/alr/alr_environment/ada_lib'
+alias ada_lib_test='pushd ~/Project/git/alr/alr_environment/ada_lib/Ada_Lib_Tests'
+alias alr_environment='pushd ~/Project/git/alr/alr_environment'
+alias aunit='pushd ~/Project/git/alr/alr_environment/aunit'
+alias application='pushd ~/Project/git/alr/alr_environment/applications'
+alias camera='pushd ~/Project/git/alr/alr_environment/applications/video/camera'
+alias camera_test='pushd ~/Project/git/alr/alr_environment/applications/video/camera/unit_test'
+alias driver='pushd ~/Project/git/alr/alr_environment/applications/video/camera/driver'
+alias driver_test='pushd ~/Project/git/alr/alr_environment/applications/video/camera/driver/unit_test'
+alias gnoga='pushd ~/Project/git/alr/alr_environment/vendor/github.com/gnoga'
+alias gitpull='git pull --recurse-submodules'
+alias findit='find $1 -name=$2 2>/dev/null'
+#alias gittag='git tag -a $1 -m $2'
+#alias gittaglist="git for-each-ref --sort=creatordate --format '%(refname) %(creatordate)' refs/tags"

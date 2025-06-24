@@ -4,7 +4,8 @@ export KIND=$2
 export DIRECTORY=`pwd`
 export SCRIPT_DIR=$(dirname ${0:A})
 export DO_TRACE=TRUE
-#export DEBUG_OPTIONS=-vv -d --verbose
+SCRIPT_DIR=$(dirname "$0")
+#export DEBUG_OPTIONS="-vv -d"
 
 # WHICH values
 #   all     - build everything (help_tests, driver unit tests, applications)
@@ -43,7 +44,11 @@ function output() {
    export APPEND_OUTPUT=-a  # append from now on
 }
 
-output TRACE global build WHICH $WHICH \
+WHICH_ALR=`which alr`
+#output TRACE PATH $PATH
+#output TRACE which alr $WHICH_ALR
+output TRACE SCRIPT_DIR $SCRIPT_DIR
+output TRACE global build WHICH $WHICH DIRECTORY $DIRECTORY \
    SCRIPT_DIR $SCRIPT_DIR KIND $KIND DO_TRACE $DO_TRACE
 
 case $KIND in
@@ -64,7 +69,6 @@ esac
 function build () {
    DIRECTORY=$1
    MODE=$2
-   KIND=$3
    if [[ "$MODE" = "help_test" && "$KIND" = "library" ]]; then
       output LIST no build help build for $DIRECTORY
    else
@@ -77,7 +81,8 @@ function build () {
          exit
       fi
    #  echo building `pwd` mode $MODE
-      COMMAND="alr $DEBUG_OPTIONS build -- -j10 -s -k -gnatE -vl -v $ALR_OPTIONS Build_Host=desktop"
+      $SCRIPT_DIR/fix_alire_toml.sh alire.toml.source
+      COMMAND="alr build -- -j10 -s -k -gnatE -vl -v $ALR_OPTIONS"
 
       echo COMMAND $COMMAND
       $COMMAND
