@@ -41,15 +41,16 @@ function run() {
    exit;
 }
 
+PARAMETERS=()
 for PARAMETER in $*; do    # put all '-' options into OPTIONS
    export FIRST=${PARAMETER:0:1}
    if [[ "$FIRST" = "-" ]]; then
      output TRACE option: $PARAMETER
-     export OPTIONS="$OPTIONS $PARAMETER"
+     OPTIONS="$OPTIONS $PARAMETER"
    else
-     export PARAMETERS+=$PARAMETER
+     PARAMETERS+=$PARAMETER
+     output TRACE PARAMETER /$PARAMETER/ PARAMETERS: /$PARAMETERS/
    fi
-   shift 1
 done
 
 output TRACE source routines.sh PARAMETERS /$PARAMETERS/ OPTIONS /$OPTIONS/ OUPUT=/$OUTPUT/

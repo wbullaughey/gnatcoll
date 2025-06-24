@@ -44,6 +44,7 @@
         <F N="../../../local.gpr"/>
         <F N="../../applications/video/camera/driver/unit_test/run.sh"/>
         <F N="../../applications/video/camera/driver/unit_test/suites"/>
+        <F N="../../applications/video/camera/driver/unit_test/TRACE.txt"/>
     </Files>
     <Config
         Name="Debug"
