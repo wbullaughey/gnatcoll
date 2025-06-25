@@ -104,16 +104,18 @@ function build_all () {
       echo "pushd to $SCRIPT_DIR failed"
       exit
    fi
-   build "gnoga_lib/gnoga_options" $MODE library
    build "ada_lib" $MODE  library
-   build "vendor/github.com/gnoga" $MODE library
-   build "gnoga_lib/gnoga_ada_lib" $MODE library
+   build "ada_lib/ada_lib_test_lib" $MODE library
    build "ada_lib/ada_lib_tests" $MODE program
    build "applications/video/camera" $MODE program
-   build "applications/video/camera/test_lib" $MODE library
-   build "applications/video/camera/unit_test" $MODE program
    build "applications/video/camera/driver" $MODE program
    build "applications/video/camera/driver/unit_test" $MODE program
+   build "applications/video/camera/test_lib" $MODE library
+   build "applications/video/camera/unit_test" $MODE program
+   build "aunit" $MODE library
+   build "gnoga_lib/gnoga_ada_lib" $MODE library
+   build "gnoga_lib/gnoga_options" $MODE library
+   build "vendor/github.com/gnoga" $MODE library
    build ".    " $MODE
    echo all directories built for mode $MODE
    popd
