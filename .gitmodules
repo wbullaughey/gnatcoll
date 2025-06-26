@@ -1,8 +1,8 @@
 [submodule "ada_lib"]
-	path = ada_lib
-	url = git@github.com:wbullaughey/ada_lib
+   path = ada_lib
+   url = git@github.com:wbullaughey/ada_lib
 [submodule "applications"]
-	path = applications
+   path = applications
    url = git@github.com:wbullaughey/applications
 [submodule "aunit"]
    path = aunit
