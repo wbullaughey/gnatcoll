@@ -3,7 +3,7 @@
 	url = git@github.com:wbullaughey/ada_lib
 [submodule "applications"]
 	path = applications
-	url = ./applications
+   url = git@github.com:wbullaughey/applications
 [submodule "aunit"]
    path = aunit
    url = git@github.com:wbullaughey/aunit
