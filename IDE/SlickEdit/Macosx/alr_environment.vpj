@@ -32,6 +32,8 @@
             Recurse="0"
             Excludes="*.a;*.o;*.ali"
             L="1"/>
+        <F N="../../../.gitignore"/>
+        <F N="../../../.gitmodules"/>
         <F N="../../../alire.toml"/>
         <F N="../../../alr_environment.gpr"/>
         <F N="../../../config/alr_environment_config.gpr"/>
