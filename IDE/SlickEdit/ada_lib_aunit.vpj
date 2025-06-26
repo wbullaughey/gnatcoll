@@ -1,61 +1,45 @@
 <!DOCTYPE Project SYSTEM "http://www.slickedit.com/dtd/vse/10.0/vpj.dtd">
 <Project
-    WorkingDir="../../applications/video/camera/driver/"
+    WorkingDir="../../ada_lib/aunit/"
     Version="10.0"
     VendorName="SlickEdit"
     TemplateName="Ada - GNU Ada Compiler"
     Customized="1"
-    BuildSystem="automakefile"
-    BuildMakeFile="%rp%rn.mak"
+    BuildSystem=""
+    BuildMakeFile=""
     BuildMakeJobs="">
     <Files>
         <Folder
             Name="Source Files"
             Filters="*.ada;*.adb;*.c;*.cpp"
-            GUID="{D896BA48-0E18-495E-A6F9-438A261FC2D2}"/>
+            GUID="{FAB4646E-E4C1-427E-9DE1-211A80D4AF88}"/>
         <Folder
             Name="Header Files"
             Filters="*.h;*.ads"
-            GUID="{186094B4-4060-4449-9D37-3053E224C045}"/>
+            GUID="{1B460289-B093-4536-9616-EFA0E0C82B3B}"/>
         <Folder
             Name="Resource Files"
             Filters="*.def;*.res"
-            GUID="{E817E0B0-4A5E-4461-ADCA-71FEF7BB0B74}"/>
+            GUID="{E33A7D29-C8DB-4237-8BE6-4EF3370222D4}"/>
         <Folder
             Name="Other Files"
             Filters="*.*"
-            GUID="{EEDEC317-13A6-406E-A53B-C2D98964F19B}"/>
+            GUID="{264327D2-D17E-4334-9BDC-904925DC2FF7}"/>
         <F
-            N="../../applications/video/camera/driver/src/*.ad?"
-            Recurse="0"
-            Excludes=""
-            L="1"/>
-        <F
-            N="../../applications/video/camera/driver/*.gpr"
-            Recurse="0"
-            Excludes=""
-            L="1"/>
-        <F
-            N="../../applications/video/camera/driver/*.sh"
-            Recurse="0"
-            Excludes=""
-            L="1"/>
-        <F N="../../applications/video/camera/driver/alire.toml"/>
-        <F N="../../applications/video/camera/driver/build.sh"/>
-        <F N="../../applications/video/camera/driver/camera_driver.gpr"/>
-        <F
-            N="camera_test_driver.mak"
-            Type="Makefile"/>
-        <F N="../../applications/video/camera/driver/help"/>
-        <F N="../../applications/video/camera/driver/list-camera_driver.txt"/>
-        <F N="../../applications/video/camera/driver/run.sh"/>
-        <F N="../../applications/video/camera/driver/suites"/>
+            N="../../ada_lib/aunit/src/*.ad?"
+            Recurse="1"
+            Excludes=""/>
+        <F N="../../ada_lib/aunit/.gitignore"/>
+        <F N="../../ada_lib/aunit/ada_lib_aunit.gpr"/>
+        <F N="../../ada_lib/aunit/config/ada_lib_aunit_config.gpr"/>
+        <F N="../../ada_lib/aunit/alire.toml"/>
+        <F N="../../ada_lib/aunit/build.sh"/>
     </Files>
     <Config
         Name="Debug"
         Type="gnuc"
         DebugCallbackName="gdb"
-        OutputFile="camera_test_driver"
+        OutputFile="ada_lib_aunit"
         CompilerConfigName="Latest Version">
         <Menu>
             <Target
@@ -71,8 +55,8 @@
                 <Exec CmdLine="./build.sh execute"/>
             </Target>
             <Target
-                Name="Build All"
-                MenuCaption="Build All"
+                Name="build all"
+                MenuCaption="build all"
                 RunFromDir="%rw"
                 CaptureOutputWith="ProcessBuffer"
                 SaveOption="SaveWorkspaceFiles">
@@ -100,7 +84,7 @@
                 Deletable="0"
                 SaveOption="SaveWorkspaceFiles"
                 RunFromDir="%rw">
-                <Exec CmdLine='make -f "%rp%rn.mak" rebuild CFG=%b'/>
+                <Exec CmdLine=""/>
             </Target>
             <Target
                 Name="Debug"
@@ -168,7 +152,7 @@
         Name="Release"
         Type="gnuc"
         DebugCallbackName="gdb"
-        OutputFile="camera_test_driver"
+        OutputFile="ada_lib_aunit"
         CompilerConfigName="Latest Version">
         <Menu>
             <Target
@@ -184,8 +168,8 @@
                 <Exec CmdLine="./build.sh execute"/>
             </Target>
             <Target
-                Name="Build All"
-                MenuCaption="Build All"
+                Name="build all"
+                MenuCaption="build all"
                 RunFromDir="%rw"
                 CaptureOutputWith="ProcessBuffer"
                 SaveOption="SaveWorkspaceFiles">
@@ -213,7 +197,7 @@
                 Deletable="0"
                 SaveOption="SaveWorkspaceFiles"
                 RunFromDir="%rw">
-                <Exec CmdLine='make -f "%rp%rn.mak" rebuild CFG=%b'/>
+                <Exec CmdLine=""/>
             </Target>
             <Target
                 Name="Debug"

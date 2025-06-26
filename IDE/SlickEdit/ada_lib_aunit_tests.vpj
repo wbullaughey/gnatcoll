@@ -26,7 +26,7 @@
             </Target>
             <Target
                 Name="Build All"
-                MenuCaption="Global Build"
+                MenuCaption="Build All"
                 SaveOption="SaveAll"
                 ClearProcessBuffer="1"
                 CaptureOutputWith="ProcessBuffer"
