@@ -9,11 +9,11 @@ if [ -f "$SOURCE" ]; then
    case $ALR_BUILD_ENVIRONMENT in
 
       "desktop")
-         sed '/^@/d' $SOURCE > $TARGET
+         sed 's/^%//;/^@/d' $SOURCE > $TARGET
          ;;
 
       "laptop")
-         sed 's/^@//' $SOURCE > $TARGET
+         sed 's/^@//;/^%/d' $SOURCE > $TARGET
          ;;
 
       "*")
