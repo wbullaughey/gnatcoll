@@ -55,8 +55,17 @@
                 SaveOption="SaveWorkspaceFiles"
                 RunFromDir="%rw"
                 ClearProcessBuffer="1"
-                Verbose="1">
-                <Exec CmdLine="./build.sh"/>
+                Verbose="1"
+                Beep="1">
+                <Exec CmdLine="./build.sh execute"/>
+            </Target>
+            <Target
+                Name="build all"
+                MenuCaption="build all"
+                RunFromDir="%rw"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveWorkspaceFiles">
+                <Exec CmdLine="./build.sh all"/>
             </Target>
             <Target
                 Name="Compile"
@@ -151,8 +160,17 @@
                 SaveOption="SaveWorkspaceFiles"
                 RunFromDir="%rw"
                 ClearProcessBuffer="1"
-                Verbose="1">
-                <Exec CmdLine="./build.sh"/>
+                Verbose="1"
+                Beep="1">
+                <Exec CmdLine="./build.sh execute"/>
+            </Target>
+            <Target
+                Name="build all"
+                MenuCaption="build all"
+                RunFromDir="%rw"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveWorkspaceFiles">
+                <Exec CmdLine="./build.sh all"/>
             </Target>
             <Target
                 Name="Compile"
