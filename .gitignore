@@ -9,7 +9,6 @@ COPYING.RUNTIME
 COPYING3
 Makefile
 README.md
-alire.toml
 docs/
 examples/
 gnat_debug.adc
